@@ -1,0 +1,768 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C488EC7F2201E64D00D35312 /* WaterToHightComponets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC7E2201E64D00D35312 /* WaterToHightComponets.swift */; };
+		C488EC832201E76900D35312 /* HightToWaterComponets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC822201E76900D35312 /* HightToWaterComponets.swift */; };
+		C488EC862202176400D35312 /* WaterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC852202176400D35312 /* WaterInteractor.swift */; };
+		C488EC8922021A6C00D35312 /* WaterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC8822021A6C00D35312 /* WaterPresenter.swift */; };
+		C488EC8F22022FFD00D35312 /* SettingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC8E22022FFD00D35312 /* SettingProtocol.swift */; };
+		C488EC922202308C00D35312 /* SettingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC912202308C00D35312 /* SettingRouter.swift */; };
+		C488EC94220230D000D35312 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC93220230D000D35312 /* SettingViewController.swift */; };
+		C488EC96220230E600D35312 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC95220230E600D35312 /* SettingView.swift */; };
+		C488EC982202387100D35312 /* SodaCalculationComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC972202387100D35312 /* SodaCalculationComponents.swift */; };
+		C4B82805220079EA00645513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B82804220079EA00645513 /* AppDelegate.swift */; };
+		C4B82807220079EA00645513 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B82806220079EA00645513 /* ViewController.swift */; };
+		C4B8280A220079EA00645513 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B82808220079EA00645513 /* Main.storyboard */; };
+		C4B8280D220079EA00645513 /* BrewCalculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4B8280B220079EA00645513 /* BrewCalculator.xcdatamodeld */; };
+		C4B8280F220079EC00645513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B8280E220079EC00645513 /* Assets.xcassets */; };
+		C4B82812220079EC00645513 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B82810220079EC00645513 /* LaunchScreen.storyboard */; };
+		C4B8281D220079EC00645513 /* BrewCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8281C220079EC00645513 /* BrewCalculatorTests.swift */; };
+		C4B82828220079EC00645513 /* BrewCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B82827220079EC00645513 /* BrewCalculatorUITests.swift */; };
+		C4B8283722007A6800645513 /* WaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8283622007A6800645513 /* WaterViewController.swift */; };
+		C4B8283A22007ACA00645513 /* WaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8283922007ACA00645513 /* WaterView.swift */; };
+		C4B8283D22007B5C00645513 /* WaterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8283C22007B5C00645513 /* WaterProtocol.swift */; };
+		C4B8283F22007F5F00645513 /* BrewTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8283E22007F5F00645513 /* BrewTabBarController.swift */; };
+		C4B82842220081E400645513 /* WaterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B82841220081E400645513 /* WaterRouter.swift */; };
+		C4B828442200C55300645513 /* UIView+anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B828432200C55300645513 /* UIView+anchors.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C4B82819220079EC00645513 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4B827F9220079EA00645513 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4B82800220079EA00645513;
+			remoteInfo = BrewCalculator;
+		};
+		C4B82824220079EC00645513 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4B827F9220079EA00645513 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4B82800220079EA00645513;
+			remoteInfo = BrewCalculator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C488EC7E2201E64D00D35312 /* WaterToHightComponets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterToHightComponets.swift; sourceTree = "<group>"; };
+		C488EC822201E76900D35312 /* HightToWaterComponets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HightToWaterComponets.swift; sourceTree = "<group>"; };
+		C488EC852202176400D35312 /* WaterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterInteractor.swift; sourceTree = "<group>"; };
+		C488EC8822021A6C00D35312 /* WaterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterPresenter.swift; sourceTree = "<group>"; };
+		C488EC8E22022FFD00D35312 /* SettingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProtocol.swift; sourceTree = "<group>"; };
+		C488EC912202308C00D35312 /* SettingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRouter.swift; sourceTree = "<group>"; };
+		C488EC93220230D000D35312 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		C488EC95220230E600D35312 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		C488EC972202387100D35312 /* SodaCalculationComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SodaCalculationComponents.swift; sourceTree = "<group>"; };
+		C4B82801220079EA00645513 /* BrewCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4B82804220079EA00645513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C4B82806220079EA00645513 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C4B82809220079EA00645513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C4B8280C220079EA00645513 /* BrewCalculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BrewCalculator.xcdatamodel; sourceTree = "<group>"; };
+		C4B8280E220079EC00645513 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C4B82811220079EC00645513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C4B82813220079EC00645513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4B82818220079EC00645513 /* BrewCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrewCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4B8281C220079EC00645513 /* BrewCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewCalculatorTests.swift; sourceTree = "<group>"; };
+		C4B8281E220079EC00645513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4B82823220079EC00645513 /* BrewCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrewCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4B82827220079EC00645513 /* BrewCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewCalculatorUITests.swift; sourceTree = "<group>"; };
+		C4B82829220079EC00645513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4B8283622007A6800645513 /* WaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterViewController.swift; sourceTree = "<group>"; };
+		C4B8283922007ACA00645513 /* WaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterView.swift; sourceTree = "<group>"; };
+		C4B8283C22007B5C00645513 /* WaterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterProtocol.swift; sourceTree = "<group>"; };
+		C4B8283E22007F5F00645513 /* BrewTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewTabBarController.swift; sourceTree = "<group>"; };
+		C4B82841220081E400645513 /* WaterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterRouter.swift; sourceTree = "<group>"; };
+		C4B828432200C55300645513 /* UIView+anchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+anchors.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C4B827FE220079EA00645513 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4B82815220079EC00645513 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4B82820220079EC00645513 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C488EC802201E70700D35312 /* Water */ = {
+			isa = PBXGroup;
+			children = (
+				C488EC872202198300D35312 /* Presenter */,
+				C488EC842202173E00D35312 /* Interactor */,
+				C4B82840220081C900645513 /* Router */,
+				C4B8283B22007B3D00645513 /* Protocol */,
+				C4B8283822007AB900645513 /* View */,
+				C4B8283522007A2700645513 /* ViewController */,
+			);
+			path = Water;
+			sourceTree = "<group>";
+		};
+		C488EC812201E71E00D35312 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4B8283E22007F5F00645513 /* BrewTabBarController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C488EC842202173E00D35312 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C488EC852202176400D35312 /* WaterInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C488EC872202198300D35312 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C488EC8822021A6C00D35312 /* WaterPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C488EC8A22022F4400D35312 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C488EC902202307600D35312 /* Router */,
+				C488EC8D22022FB300D35312 /* Protocol */,
+				C488EC8C22022F6500D35312 /* ViewController */,
+				C488EC8B22022F5C00D35312 /* View */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C488EC8B22022F5C00D35312 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C488EC95220230E600D35312 /* SettingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C488EC8C22022F6500D35312 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C488EC93220230D000D35312 /* SettingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C488EC8D22022FB300D35312 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C488EC8E22022FFD00D35312 /* SettingProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		C488EC902202307600D35312 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C488EC912202308C00D35312 /* SettingRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C4B827F8220079EA00645513 = {
+			isa = PBXGroup;
+			children = (
+				C4B82803220079EA00645513 /* BrewCalculator */,
+				C4B8281B220079EC00645513 /* BrewCalculatorTests */,
+				C4B82826220079EC00645513 /* BrewCalculatorUITests */,
+				C4B82802220079EA00645513 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C4B82802220079EA00645513 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4B82801220079EA00645513 /* BrewCalculator.app */,
+				C4B82818220079EC00645513 /* BrewCalculatorTests.xctest */,
+				C4B82823220079EC00645513 /* BrewCalculatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4B82803220079EA00645513 /* BrewCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				C488EC8A22022F4400D35312 /* Settings */,
+				C488EC812201E71E00D35312 /* View */,
+				C488EC802201E70700D35312 /* Water */,
+				C4B82804220079EA00645513 /* AppDelegate.swift */,
+				C4B828432200C55300645513 /* UIView+anchors.swift */,
+				C4B82806220079EA00645513 /* ViewController.swift */,
+				C4B82808220079EA00645513 /* Main.storyboard */,
+				C4B8280E220079EC00645513 /* Assets.xcassets */,
+				C4B82810220079EC00645513 /* LaunchScreen.storyboard */,
+				C4B82813220079EC00645513 /* Info.plist */,
+				C4B8280B220079EA00645513 /* BrewCalculator.xcdatamodeld */,
+			);
+			path = BrewCalculator;
+			sourceTree = "<group>";
+		};
+		C4B8281B220079EC00645513 /* BrewCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				C4B8281C220079EC00645513 /* BrewCalculatorTests.swift */,
+				C4B8281E220079EC00645513 /* Info.plist */,
+			);
+			path = BrewCalculatorTests;
+			sourceTree = "<group>";
+		};
+		C4B82826220079EC00645513 /* BrewCalculatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C4B82827220079EC00645513 /* BrewCalculatorUITests.swift */,
+				C4B82829220079EC00645513 /* Info.plist */,
+			);
+			path = BrewCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		C4B8283522007A2700645513 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C4B8283622007A6800645513 /* WaterViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C4B8283822007AB900645513 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4B8283922007ACA00645513 /* WaterView.swift */,
+				C488EC7E2201E64D00D35312 /* WaterToHightComponets.swift */,
+				C488EC822201E76900D35312 /* HightToWaterComponets.swift */,
+				C488EC972202387100D35312 /* SodaCalculationComponents.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4B8283B22007B3D00645513 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C4B8283C22007B5C00645513 /* WaterProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		C4B82840220081C900645513 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C4B82841220081E400645513 /* WaterRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C4B82800220079EA00645513 /* BrewCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4B8282C220079EC00645513 /* Build configuration list for PBXNativeTarget "BrewCalculator" */;
+			buildPhases = (
+				C4B827FD220079EA00645513 /* Sources */,
+				C4B827FE220079EA00645513 /* Frameworks */,
+				C4B827FF220079EA00645513 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BrewCalculator;
+			productName = BrewCalculator;
+			productReference = C4B82801220079EA00645513 /* BrewCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C4B82817220079EC00645513 /* BrewCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4B8282F220079EC00645513 /* Build configuration list for PBXNativeTarget "BrewCalculatorTests" */;
+			buildPhases = (
+				C4B82814220079EC00645513 /* Sources */,
+				C4B82815220079EC00645513 /* Frameworks */,
+				C4B82816220079EC00645513 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4B8281A220079EC00645513 /* PBXTargetDependency */,
+			);
+			name = BrewCalculatorTests;
+			productName = BrewCalculatorTests;
+			productReference = C4B82818220079EC00645513 /* BrewCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C4B82822220079EC00645513 /* BrewCalculatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4B82832220079EC00645513 /* Build configuration list for PBXNativeTarget "BrewCalculatorUITests" */;
+			buildPhases = (
+				C4B8281F220079EC00645513 /* Sources */,
+				C4B82820220079EC00645513 /* Frameworks */,
+				C4B82821220079EC00645513 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4B82825220079EC00645513 /* PBXTargetDependency */,
+			);
+			name = BrewCalculatorUITests;
+			productName = BrewCalculatorUITests;
+			productReference = C4B82823220079EC00645513 /* BrewCalculatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4B827F9220079EA00645513 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = asfcarvalho;
+				TargetAttributes = {
+					C4B82800220079EA00645513 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					C4B82817220079EC00645513 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = C4B82800220079EA00645513;
+					};
+					C4B82822220079EC00645513 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = C4B82800220079EA00645513;
+					};
+				};
+			};
+			buildConfigurationList = C4B827FC220079EA00645513 /* Build configuration list for PBXProject "BrewCalculator" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C4B827F8220079EA00645513;
+			productRefGroup = C4B82802220079EA00645513 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C4B82800220079EA00645513 /* BrewCalculator */,
+				C4B82817220079EC00645513 /* BrewCalculatorTests */,
+				C4B82822220079EC00645513 /* BrewCalculatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C4B827FF220079EA00645513 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4B82812220079EC00645513 /* LaunchScreen.storyboard in Resources */,
+				C4B8280F220079EC00645513 /* Assets.xcassets in Resources */,
+				C4B8280A220079EA00645513 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4B82816220079EC00645513 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4B82821220079EC00645513 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C4B827FD220079EA00645513 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4B82842220081E400645513 /* WaterRouter.swift in Sources */,
+				C4B82807220079EA00645513 /* ViewController.swift in Sources */,
+				C4B8280D220079EA00645513 /* BrewCalculator.xcdatamodeld in Sources */,
+				C488EC94220230D000D35312 /* SettingViewController.swift in Sources */,
+				C488EC8922021A6C00D35312 /* WaterPresenter.swift in Sources */,
+				C4B8283722007A6800645513 /* WaterViewController.swift in Sources */,
+				C488EC7F2201E64D00D35312 /* WaterToHightComponets.swift in Sources */,
+				C488EC982202387100D35312 /* SodaCalculationComponents.swift in Sources */,
+				C488EC922202308C00D35312 /* SettingRouter.swift in Sources */,
+				C4B82805220079EA00645513 /* AppDelegate.swift in Sources */,
+				C488EC96220230E600D35312 /* SettingView.swift in Sources */,
+				C4B8283F22007F5F00645513 /* BrewTabBarController.swift in Sources */,
+				C4B8283A22007ACA00645513 /* WaterView.swift in Sources */,
+				C4B8283D22007B5C00645513 /* WaterProtocol.swift in Sources */,
+				C4B828442200C55300645513 /* UIView+anchors.swift in Sources */,
+				C488EC862202176400D35312 /* WaterInteractor.swift in Sources */,
+				C488EC8F22022FFD00D35312 /* SettingProtocol.swift in Sources */,
+				C488EC832201E76900D35312 /* HightToWaterComponets.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4B82814220079EC00645513 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4B8281D220079EC00645513 /* BrewCalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4B8281F220079EC00645513 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4B82828220079EC00645513 /* BrewCalculatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C4B8281A220079EC00645513 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4B82800220079EA00645513 /* BrewCalculator */;
+			targetProxy = C4B82819220079EC00645513 /* PBXContainerItemProxy */;
+		};
+		C4B82825220079EC00645513 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4B82800220079EA00645513 /* BrewCalculator */;
+			targetProxy = C4B82824220079EC00645513 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C4B82808220079EA00645513 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4B82809220079EA00645513 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C4B82810220079EC00645513 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4B82811220079EC00645513 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C4B8282A220079EC00645513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C4B8282B220079EC00645513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C4B8282D220079EC00645513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TKVJKXN5X;
+				INFOPLIST_FILE = BrewCalculator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.asfcarvalho.BrewCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C4B8282E220079EC00645513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TKVJKXN5X;
+				INFOPLIST_FILE = BrewCalculator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.asfcarvalho.BrewCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C4B82830220079EC00645513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BrewCalculatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.asfcarvalho.BrewCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrewCalculator.app/BrewCalculator";
+			};
+			name = Debug;
+		};
+		C4B82831220079EC00645513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BrewCalculatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.asfcarvalho.BrewCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrewCalculator.app/BrewCalculator";
+			};
+			name = Release;
+		};
+		C4B82833220079EC00645513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BrewCalculatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.asfcarvalho.BrewCalculatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BrewCalculator;
+			};
+			name = Debug;
+		};
+		C4B82834220079EC00645513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BrewCalculatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.asfcarvalho.BrewCalculatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BrewCalculator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C4B827FC220079EA00645513 /* Build configuration list for PBXProject "BrewCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4B8282A220079EC00645513 /* Debug */,
+				C4B8282B220079EC00645513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4B8282C220079EC00645513 /* Build configuration list for PBXNativeTarget "BrewCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4B8282D220079EC00645513 /* Debug */,
+				C4B8282E220079EC00645513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4B8282F220079EC00645513 /* Build configuration list for PBXNativeTarget "BrewCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4B82830220079EC00645513 /* Debug */,
+				C4B82831220079EC00645513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4B82832220079EC00645513 /* Build configuration list for PBXNativeTarget "BrewCalculatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4B82833220079EC00645513 /* Debug */,
+				C4B82834220079EC00645513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C4B8280B220079EA00645513 /* BrewCalculator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C4B8280C220079EA00645513 /* BrewCalculator.xcdatamodel */,
+			);
+			currentVersion = C4B8280C220079EA00645513 /* BrewCalculator.xcdatamodel */;
+			path = BrewCalculator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C4B827F9220079EA00645513 /* Project object */;
+}
