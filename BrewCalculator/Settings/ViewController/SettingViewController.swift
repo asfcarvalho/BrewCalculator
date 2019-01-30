@@ -10,10 +10,14 @@ import UIKit
 
 class SettingViewController: UIViewController {
 
+    var interactor: SettingInteractorInputProtocol?
     private var settingView: SettingView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //get settings
+        interactor?.getSetting()
         
         settingView = SettingView(frame: self.view.frame)
         

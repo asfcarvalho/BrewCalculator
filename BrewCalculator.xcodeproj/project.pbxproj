@@ -16,6 +16,10 @@
 		C488EC94220230D000D35312 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC93220230D000D35312 /* SettingViewController.swift */; };
 		C488EC96220230E600D35312 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC95220230E600D35312 /* SettingView.swift */; };
 		C488EC982202387100D35312 /* SodaCalculationComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC972202387100D35312 /* SodaCalculationComponents.swift */; };
+		C488EC9B220246E600D35312 /* SettingWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC9A220246E600D35312 /* SettingWorker.swift */; };
+		C488EC9E22024C3300D35312 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC9D22024C3300D35312 /* Setting.swift */; };
+		C488ECA122024E6700D35312 /* SettingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488ECA022024E6700D35312 /* SettingInteractor.swift */; };
+		C488ECA422024FCC00D35312 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488ECA322024FCC00D35312 /* SettingPresenter.swift */; };
 		C4B82805220079EA00645513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B82804220079EA00645513 /* AppDelegate.swift */; };
 		C4B82807220079EA00645513 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B82806220079EA00645513 /* ViewController.swift */; };
 		C4B8280A220079EA00645513 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B82808220079EA00645513 /* Main.storyboard */; };
@@ -59,6 +63,10 @@
 		C488EC93220230D000D35312 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		C488EC95220230E600D35312 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		C488EC972202387100D35312 /* SodaCalculationComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SodaCalculationComponents.swift; sourceTree = "<group>"; };
+		C488EC9A220246E600D35312 /* SettingWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingWorker.swift; sourceTree = "<group>"; };
+		C488EC9D22024C3300D35312 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		C488ECA022024E6700D35312 /* SettingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInteractor.swift; sourceTree = "<group>"; };
+		C488ECA322024FCC00D35312 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
 		C4B82801220079EA00645513 /* BrewCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B82804220079EA00645513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4B82806220079EA00645513 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +154,9 @@
 		C488EC8A22022F4400D35312 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				C488ECA222024FBC00D35312 /* Presenter */,
+				C488EC9F22024E5600D35312 /* Interactor */,
+				C488EC99220246C800D35312 /* Worker */,
 				C488EC902202307600D35312 /* Router */,
 				C488EC8D22022FB300D35312 /* Protocol */,
 				C488EC8C22022F6500D35312 /* ViewController */,
@@ -186,6 +197,38 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		C488EC99220246C800D35312 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				C488EC9A220246E600D35312 /* SettingWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		C488EC9C22024C2000D35312 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C488EC9D22024C3300D35312 /* Setting.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C488EC9F22024E5600D35312 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C488ECA022024E6700D35312 /* SettingInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C488ECA222024FBC00D35312 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C488ECA322024FCC00D35312 /* SettingPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		C4B827F8220079EA00645513 = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +252,7 @@
 		C4B82803220079EA00645513 /* BrewCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				C488EC9C22024C2000D35312 /* Model */,
 				C488EC8A22022F4400D35312 /* Settings */,
 				C488EC812201E71E00D35312 /* View */,
 				C488EC802201E70700D35312 /* Water */,
@@ -408,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C488ECA122024E6700D35312 /* SettingInteractor.swift in Sources */,
 				C4B82842220081E400645513 /* WaterRouter.swift in Sources */,
 				C4B82807220079EA00645513 /* ViewController.swift in Sources */,
 				C4B8280D220079EA00645513 /* BrewCalculator.xcdatamodeld in Sources */,
@@ -418,10 +463,13 @@
 				C488EC982202387100D35312 /* SodaCalculationComponents.swift in Sources */,
 				C488EC922202308C00D35312 /* SettingRouter.swift in Sources */,
 				C4B82805220079EA00645513 /* AppDelegate.swift in Sources */,
+				C488EC9E22024C3300D35312 /* Setting.swift in Sources */,
 				C488EC96220230E600D35312 /* SettingView.swift in Sources */,
 				C4B8283F22007F5F00645513 /* BrewTabBarController.swift in Sources */,
 				C4B8283A22007ACA00645513 /* WaterView.swift in Sources */,
+				C488EC9B220246E600D35312 /* SettingWorker.swift in Sources */,
 				C4B8283D22007B5C00645513 /* WaterProtocol.swift in Sources */,
+				C488ECA422024FCC00D35312 /* SettingPresenter.swift in Sources */,
 				C4B828442200C55300645513 /* UIView+anchors.swift in Sources */,
 				C488EC862202176400D35312 /* WaterInteractor.swift in Sources */,
 				C488EC8F22022FFD00D35312 /* SettingProtocol.swift in Sources */,
