@@ -17,14 +17,51 @@ class WaterView: SodaCalculationComponets {
         
         createViewWaterToHeight()
         createViewHeightToWater()
+        createSodaCalculationView()
         
         stackViewWaterToHeightSetup()
         stackViewHeightToWaterSetup()
+        stackViewSodaCalculationAnchor()
     }
     
     //This function create the soca calculation view
     private func createSodaCalculationView() {
         
+        viewWaterSoda.addSubview(waterVolumeSodaLabel)
+        viewWaterSoda.addSubview(waterVolumeSodaText)
+        
+        viewSodaValue.addSubview(sodaVolumeLabel)
+        viewSodaValue.addSubview(sodaVolumeText)
+        
+        stackViewSoda.addArrangedSubview(viewWaterSoda)
+        stackViewSoda.addArrangedSubview(viewSodaValue)
+        sodaView.addSubview(stackViewSoda)
+        
+        self.addSubview(sodaLabel)
+        self.addSubview(sodaView)
+    }
+    
+    
+    
+    //This function make the soda calculation anchor
+    private func stackViewSodaCalculationAnchor() {
+        sodaLabel.anchor(top: viewHeightToWater.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 32, left: 16, bottom: 0, right: 16), size: CGSize(width: self.frame.width, height: 25))
+        
+        sodaView.anchor(top: sodaLabel.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 8, left: 16, bottom: 0, right: 16), size: CGSize(width: self.frame.width, height: 60))
+        
+        stackViewSoda.anchor(top: sodaView.topAnchor, leading: sodaView.leadingAnchor, bottom: sodaView.bottomAnchor, trailing: sodaView.trailingAnchor)
+        
+        viewWaterSoda.anchor(top: stackViewSoda.topAnchor, leading: stackViewSoda.leadingAnchor, bottom: stackViewSoda.bottomAnchor, trailing: nil, size: CGSize(width: stackViewSoda.frame.width / 2, height: stackViewSoda.frame.height))
+        
+        waterVolumeSodaLabel.anchor(top: viewWaterSoda.topAnchor, leading: viewWaterSoda.leadingAnchor, bottom: nil, trailing: viewWaterSoda.trailingAnchor, padding: UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8), size: CGSize(width: viewWaterSoda.frame.width, height: 20))
+        
+        waterVolumeSodaText.anchor(top: waterVolumeSodaLabel.bottomAnchor, leading: viewWaterSoda.leadingAnchor, bottom: viewWaterSoda.bottomAnchor, trailing: viewWaterSoda.trailingAnchor, padding: UIEdgeInsets(top: 4, left: 8, bottom: 0, right: 8))
+        
+        viewSodaValue.anchor(top: stackViewSoda.topAnchor, leading: viewWaterSoda.trailingAnchor, bottom: stackViewSoda.bottomAnchor, trailing: stackViewSoda.trailingAnchor)
+        
+        sodaVolumeLabel.anchor(top: viewSodaValue.topAnchor, leading: viewSodaValue.leadingAnchor, bottom: nil, trailing: viewSodaValue.trailingAnchor, padding: UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8), size: CGSize(width: viewSodaValue.frame.width, height: 20))
+        
+        sodaVolumeText.anchor(top: sodaVolumeLabel.bottomAnchor, leading: viewSodaValue.leadingAnchor, bottom: viewSodaValue.bottomAnchor, trailing: viewSodaValue.trailingAnchor, padding: UIEdgeInsets(top: 4, left: 8, bottom: 0, right: 8))
     }
     
     //This function creat the water to height view
@@ -93,7 +130,7 @@ class WaterView: SodaCalculationComponets {
         
         viewVolume.anchor(top: stackView.topAnchor, leading: stackView.leadingAnchor, bottom: stackView.bottomAnchor, trailing: nil, size: CGSize(width: stackView.frame.width / 2, height: stackView.frame.height))
         
-        waterVolumeLabel.anchor(top: viewVolume.topAnchor, leading: viewVolume.leadingAnchor, bottom: nil, trailing: viewVolume.trailingAnchor, padding: UIEdgeInsets(top: 8, left: 8, bottom: 2, right: 8), size: CGSize(width: viewVolume.frame.width, height: 20))
+        waterVolumeLabel.anchor(top: viewVolume.topAnchor, leading: viewVolume.leadingAnchor, bottom: nil, trailing: viewVolume.trailingAnchor, padding: UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8), size: CGSize(width: viewVolume.frame.width, height: 20))
 
         waterVolumeText.anchor(top: waterVolumeLabel.bottomAnchor, leading: viewVolume.leadingAnchor, bottom: viewVolume.bottomAnchor, trailing: viewVolume.trailingAnchor, padding: UIEdgeInsets(top: 4, left: 8, bottom: 0, right: 8))
         

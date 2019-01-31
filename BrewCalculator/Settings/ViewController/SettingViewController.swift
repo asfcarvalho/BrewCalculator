@@ -38,7 +38,11 @@ class SettingViewController: UIViewController {
     
     @objc private func saveAction() {
         settingView?.rayText.endEditing(true)
-        interactor?.setSetting(setting: Setting(ray: Double(settingView?.rayText.text?.replacingOccurrences(of: ",", with: ".") ?? "0.0")))
+        interactor?.setSetting(setting: Setting(ray: Double(settingView?.rayText.text?.replacingOccurrences(of: ",", with: ".") ?? "0.0"),
+                                                sodaPercentage: Double(settingView?.sodaPercentageText.text?.replacingOccurrences(of: ",", with: ".") ?? "0.0"),
+                                                sodaProportion: 1,
+                                                pacPercentage: 0.1,
+                                                iodinePercentage: 10.0))
     }
 }
 

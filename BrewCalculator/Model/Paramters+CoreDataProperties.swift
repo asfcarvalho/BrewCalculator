@@ -18,5 +18,8 @@ extension Paramters {
     }
 
     @NSManaged public var ray: Double
-
+    @NSManaged public var sodaPercentage: Double
+    @NSManaged public var sodaProportion: Double
+    @NSManaged public var pacPercentage: Double
+    @NSManaged public var iodinePercentage: Double
 }

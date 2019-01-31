@@ -21,7 +21,11 @@ class SettingWorker: SettingWorkerInputProtocol {
             do{
                 let result = try context.viewContext.fetch(request)
                 print(result.first?.ray)
-                interactor?.getSetting(setting: Setting(ray: result.first?.ray))
+                interactor?.getSetting(setting: Setting(ray: result.first?.ray,
+                                                        sodaPercentage: result.first?.sodaPercentage,
+                                                        sodaProportion: result.first?.sodaProportion,
+                                                        pacPercentage:  result.first?.pacPercentage,
+                                                        iodinePercentage: result.first?.iodinePercentage))
             }catch {
                 print(error)
             }
@@ -44,10 +48,18 @@ class SettingWorker: SettingWorkerInputProtocol {
                     if let newParamters = NSEntityDescription.entity(forEntityName: String(describing: Paramters.self),
                                                                      in: context.viewContext) {
                         let value = Paramters(entity: newParamters, insertInto: context.viewContext)
-                        value.ray = setting.ray ?? 0.0                        
+                        value.ray = setting.ray ?? 0.0
+                        value.sodaPercentage = setting.sodaPercentage ?? 0.0
+                        value.sodaProportion = setting.sodaProportion ?? 0.0
+                        value.pacPercentage = setting.pacPercentage ?? 0.0
+                        value.iodinePercentage = setting.iodinePercentage ?? 0.0
                     }
                 }else {
                     result.first?.ray = setting.ray ?? 0.0
+                    result.first?.sodaPercentage = setting.sodaPercentage ?? 0.0
+                    result.first?.sodaProportion = setting.sodaProportion ?? 0.0
+                    result.first?.pacPercentage = setting.pacPercentage ?? 0.0
+                    result.first?.iodinePercentage = setting.iodinePercentage ?? 0.0
                 }
                 try context.viewContext.save()
                 interactor?.savedSuccess(message: "Settings saved successfully!")

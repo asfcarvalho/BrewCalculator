@@ -27,6 +27,7 @@ class WaterViewController: UIViewController {
         
         waterView?.waterVolumeText.addTarget(self, action: #selector(waterVolumeTextChange(_:)), for: .editingChanged)
         waterView?.waterHeightTextHeightHeightToWater.addTarget(self, action: #selector(waterHeightTextChange(_:)), for: .editingChanged)
+        waterView?.waterVolumeSodaText.addTarget(self, action: #selector(waterSodaVolumeTextChange(_:)), for: .editingChanged)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -43,6 +44,10 @@ class WaterViewController: UIViewController {
         interactor?.calcHeightToWater(value: Double(sender.text?.replacingOccurrences(of: ",", with: ".") ?? "0.0") ?? 0.0)
     }
     
+    @objc private func waterSodaVolumeTextChange(_ sender: UITextField) {
+        interactor?.calcSodaValue(value: Double(sender.text?.replacingOccurrences(of: ",", with: ".") ?? "0.0") ?? 0.0)
+    }
+    
     @objc private func touchViewAction() {
         waterView?.waterVolumeText.endEditing(true)
         waterView?.waterHeightTextHeightHeightToWater.endEditing(true)
@@ -50,6 +55,18 @@ class WaterViewController: UIViewController {
 }
 
 extension WaterViewController: WaterViewControllerProtocol {
+    func showPacValue(value: Double) {
+        
+    }
+    
+    func showIodineValue(value: Double) {
+        
+    }
+    
+    func showSodaVolume(value: Double) {
+        waterView?.sodaVolumeText.text = value.description
+    }
+    
     func showWaterToHeightResult(value: Double) {
         waterView?.waterHeightText.text = value.description
     }

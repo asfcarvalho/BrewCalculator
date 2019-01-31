@@ -40,7 +40,7 @@
                             <constraint firstItem="Jkp-x7-lWo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QEe-Sy-mdb"/>
                             <constraint firstItem="Jkp-x7-lWo" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="aBl-7G-av0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jkp-x7-lWo" secondAttribute="trailing" id="nI9-yo-gLQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jkp-x7-lWo" secondAttribute="bottom" id="xPC-AY-kA8"/>
+                            <constraint firstAttribute="bottom" secondItem="Jkp-x7-lWo" secondAttribute="bottom" id="xPC-AY-kA8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

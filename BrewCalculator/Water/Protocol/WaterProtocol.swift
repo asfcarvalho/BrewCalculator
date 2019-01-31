@@ -22,6 +22,9 @@ protocol WaterInteractorInputProtocol {
     //ViewController -> Interactor
     func calcWaterToHeight(value: Double)
     func calcHeightToWater(value: Double)
+    func calcSodaValue(value: Double)
+    func calcPacValue(value: Double)
+    func calcIodineValue(value: Double)
     func getSetting()
 }
 
@@ -33,12 +36,18 @@ protocol WaterInteractorOutputProtocol: class {
     //Interactor -> Presenter
     func showWaterToHeightResult(value: Double)
     func showHeightToWaterResult(value: Double)
+    func showSodaVolume(value: Double)
+    func showPacValue(value: Double)
+    func showIodineValue(value: Double)
 }
 
 protocol WaterViewControllerProtocol {
     //Presenter -> ViewController
     func showWaterToHeightResult(value: Double)
     func showHeightToWaterResult(value: Double)
+    func showSodaVolume(value: Double)
+    func showPacValue(value: Double)
+    func showIodineValue(value: Double)
 }
 
 protocol WaterWorkerInputProtocol {

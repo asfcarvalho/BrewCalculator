@@ -14,6 +14,18 @@ class WaterPresenter: WaterPresenterProtocol {
 }
 
 extension WaterPresenter: WaterInteractorOutputProtocol {
+    func showPacValue(value: Double) {
+        viewController?.showPacValue(value: value)
+    }
+    
+    func showIodineValue(value: Double) {
+        viewController?.showIodineValue(value: value)
+    }
+    
+    func showSodaVolume(value: Double) {
+        viewController?.showSodaVolume(value: value)
+    }
+    
     func showWaterToHeightResult(value: Double) {
         viewController?.showWaterToHeightResult(value: value)
     }

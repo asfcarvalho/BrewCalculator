@@ -25,4 +25,59 @@ class SodaCalculationComponets: HeightToWaterComponents {
         view.clipsToBounds = true
         return view
     }()
+    
+    var stackViewSoda: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        stack.distribution = .fillEqually
+        return stack
+    }()
+    
+    var viewWaterSoda: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.white.withAlphaComponent(0.4)
+        return view
+    }()
+    
+    var viewSodaValue: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
+    let waterVolumeSodaLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Water/ML"
+        label.textAlignment = .center
+        return label
+    }()
+    
+    var waterVolumeSodaText: UITextField = {
+        let textView = UITextField()
+        textView.placeholder = "Put the water volume"
+        textView.isUserInteractionEnabled = true
+        textView.font = UIFont.boldSystemFont(ofSize: 14)
+        textView.adjustsFontSizeToFitWidth = true
+        textView.minimumFontSize = 10
+        textView.keyboardType = .decimalPad
+        textView.textAlignment = .center
+        return textView
+    }()
+    
+    let sodaVolumeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Soda/ML"
+        label.textAlignment = .center
+        return label
+    }()
+    
+    var sodaVolumeText: UITextField = {
+        let textView = UITextField()
+        textView.isUserInteractionEnabled = false
+        textView.text = "0.0"
+        textView.font = UIFont.boldSystemFont(ofSize: 14)
+        textView.adjustsFontSizeToFitWidth = true
+        textView.minimumFontSize = 10
+        textView.textAlignment = .center
+        return textView
+    }()
 }
