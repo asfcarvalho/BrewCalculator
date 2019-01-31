@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4010C30220320EC000989BE /* Paramters+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4010C2E220320EC000989BE /* Paramters+CoreDataClass.swift */; };
+		C4010C31220320EC000989BE /* Paramters+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4010C2F220320EC000989BE /* Paramters+CoreDataProperties.swift */; };
+		C4010C3422033651000989BE /* WaterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4010C3322033651000989BE /* WaterWorker.swift */; };
 		C488EC7F2201E64D00D35312 /* WaterToHightComponets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC7E2201E64D00D35312 /* WaterToHightComponets.swift */; };
 		C488EC832201E76900D35312 /* HightToWaterComponets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC822201E76900D35312 /* HightToWaterComponets.swift */; };
 		C488EC862202176400D35312 /* WaterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC852202176400D35312 /* WaterInteractor.swift */; };
@@ -54,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C4010C2E220320EC000989BE /* Paramters+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Paramters+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C4010C2F220320EC000989BE /* Paramters+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Paramters+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C4010C3322033651000989BE /* WaterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterWorker.swift; sourceTree = "<group>"; };
 		C488EC7E2201E64D00D35312 /* WaterToHightComponets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterToHightComponets.swift; sourceTree = "<group>"; };
 		C488EC822201E76900D35312 /* HightToWaterComponets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HightToWaterComponets.swift; sourceTree = "<group>"; };
 		C488EC852202176400D35312 /* WaterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterInteractor.swift; sourceTree = "<group>"; };
@@ -114,9 +120,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C4010C3222033597000989BE /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				C4010C3322033651000989BE /* WaterWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
 		C488EC802201E70700D35312 /* Water */ = {
 			isa = PBXGroup;
 			children = (
+				C4010C3222033597000989BE /* Worker */,
 				C488EC872202198300D35312 /* Presenter */,
 				C488EC842202173E00D35312 /* Interactor */,
 				C4B82840220081C900645513 /* Router */,
@@ -208,6 +223,8 @@
 		C488EC9C22024C2000D35312 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C4010C2E220320EC000989BE /* Paramters+CoreDataClass.swift */,
+				C4010C2F220320EC000989BE /* Paramters+CoreDataProperties.swift */,
 				C488EC9D22024C3300D35312 /* Setting.swift */,
 			);
 			path = Model;
@@ -463,16 +480,19 @@
 				C488EC982202387100D35312 /* SodaCalculationComponents.swift in Sources */,
 				C488EC922202308C00D35312 /* SettingRouter.swift in Sources */,
 				C4B82805220079EA00645513 /* AppDelegate.swift in Sources */,
+				C4010C31220320EC000989BE /* Paramters+CoreDataProperties.swift in Sources */,
 				C488EC9E22024C3300D35312 /* Setting.swift in Sources */,
 				C488EC96220230E600D35312 /* SettingView.swift in Sources */,
 				C4B8283F22007F5F00645513 /* BrewTabBarController.swift in Sources */,
 				C4B8283A22007ACA00645513 /* WaterView.swift in Sources */,
+				C4010C3422033651000989BE /* WaterWorker.swift in Sources */,
 				C488EC9B220246E600D35312 /* SettingWorker.swift in Sources */,
 				C4B8283D22007B5C00645513 /* WaterProtocol.swift in Sources */,
 				C488ECA422024FCC00D35312 /* SettingPresenter.swift in Sources */,
 				C4B828442200C55300645513 /* UIView+anchors.swift in Sources */,
 				C488EC862202176400D35312 /* WaterInteractor.swift in Sources */,
 				C488EC8F22022FFD00D35312 /* SettingProtocol.swift in Sources */,
+				C4010C30220320EC000989BE /* Paramters+CoreDataClass.swift in Sources */,
 				C488EC832201E76900D35312 /* HightToWaterComponets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,20 +9,40 @@
 import UIKit
 
 class WaterInteractor: WaterInteractorInputProtocol {
+    
     let pi = 3.14
-    let r = 22.5
+    var r = 22.5
     var presenter: WaterInteractorOutputProtocol?
+    var worker: WaterWorkerInputProtocol?
+    var setting: Setting?
     
     func calcWaterToHeight(value: Double) {
         
+        let v = value * 1000
+        r = setting?.ray ?? r
         
-        let l = Double(String(format: "%.2f", ((value * pi * (r * r)) / 1000))) ?? 0.0
-        presenter?.showWaterToHeightResult(value: l)
+        let h = Double(String(format: "%.2f", v / (pi * (r * r)))) ?? 0.0
+        
+        presenter?.showWaterToHeightResult(value: h)
     }
     
     func calcHeightToWater(value: Double) {
-        let v = value * 1000
-        let h = Double(String(format: "%.2f", v / (pi * (r * r)))) ?? 0.0
-        presenter?.showHeightToWaterResult(value: h)
+        
+        
+        r = setting?.ray ?? r
+        
+        let l = Double(String(format: "%.2f", ((value * pi * (r * r)) / 1000))) ?? 0.0
+        
+        presenter?.showHeightToWaterResult(value: l)
+    }
+    
+    func getSetting() {
+        worker?.getSetting()
+    }
+}
+
+extension WaterInteractor: WaterWorkerOutputProtocol {
+    func getSetting(setting: Setting) {
+        self.setting = setting
     }
 }

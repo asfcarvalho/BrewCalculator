@@ -22,6 +22,14 @@ class SettingInteractor: SettingInteractorInputProtocol {
 }
 
 extension SettingInteractor: SettingWorkerOutputProtocol {
+    func savedSuccess(message: String) {
+        presenter?.savedSuccess(message: message)
+    }
+    
+    func savedFailure(message: String) {
+        presenter?.savedFailure(message: message)
+    }
+    
     func getSetting(setting: Setting) {
         presenter?.getSetting(setting: setting)
     }

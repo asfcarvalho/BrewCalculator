@@ -12,12 +12,18 @@ class WaterRouter: WaterRouterProtocol {
     
     class func createViewController() -> UIViewController {
         
-        var interactor: WaterInteractorInputProtocol = WaterInteractor()
+        var interactor: WaterInteractorInputProtocol & WaterWorkerOutputProtocol = WaterInteractor()
         var presenter: WaterPresenterProtocol & WaterInteractorOutputProtocol = WaterPresenter()
+        var worker: WaterWorkerInputProtocol & SettingWorkerOutputProtocol = WaterWorker()
+        var settingWorker: SettingWorkerInputProtocol = SettingWorker()
         
         let viewController = WaterViewController.init(nibName: nil, bundle: nil)
         viewController.interactor = interactor
         interactor.presenter = presenter
+        worker.interactor = interactor
+        worker.settingWorker = settingWorker
+        interactor.worker = worker
+        settingWorker.interactor = worker
         presenter.viewController = viewController
         
         return viewController

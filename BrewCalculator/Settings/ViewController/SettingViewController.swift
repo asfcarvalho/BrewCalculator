@@ -11,13 +11,12 @@ import UIKit
 class SettingViewController: UIViewController {
 
     var interactor: SettingInteractorInputProtocol?
+    var router: SettingRouterProtocol?
+    
     private var settingView: SettingView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //get settings
-        interactor?.getSetting()
         
         settingView = SettingView(frame: self.view.frame)
         
@@ -26,9 +25,33 @@ class SettingViewController: UIViewController {
         let touchView = UITapGestureRecognizer(target: self, action: #selector(touchViewAction))
         settingView?.addGestureRecognizer(touchView)
         settingView?.isUserInteractionEnabled = true
+        
+        settingView?.saveButton.addTarget(self, action: #selector(saveAction), for: .touchUpInside)
+        
+        //get settings
+        interactor?.getSetting()
     }
 
     @objc private func touchViewAction() {
         settingView?.rayText.endEditing(true)
+    }
+    
+    @objc private func saveAction() {
+        settingView?.rayText.endEditing(true)
+        interactor?.setSetting(setting: Setting(ray: Double(settingView?.rayText.text?.replacingOccurrences(of: ",", with: ".") ?? "0.0")))
+    }
+}
+
+extension SettingViewController: SettingViewControllerProtocol {
+    func savedSuccess(message: String) {
+        router?.showAlert(with: message, viewController: self)
+    }
+    
+    func savedFailure(message: String) {
+        router?.showAlert(with: message, viewController: self)
+    }
+    
+    func getSetting(setting: String) {
+        settingView?.rayText.text = setting
     }
 }

@@ -29,12 +29,18 @@ class WaterViewController: UIViewController {
         waterView?.waterHeightTextHeightHeightToWater.addTarget(self, action: #selector(waterHeightTextChange(_:)), for: .editingChanged)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        interactor?.getSetting()
+    }
+    
     @objc private func waterVolumeTextChange(_ sender: UITextField) {
-        interactor?.calcWaterToHeight(value: Double(sender.text ?? "0.0") ?? 0.0)
+        interactor?.calcWaterToHeight(value: Double(sender.text?.replacingOccurrences(of: ",", with: ".") ?? "0.0") ?? 0.0)
     }
     
     @objc private func waterHeightTextChange(_ sender: UITextField) {
-        interactor?.calcHeightToWater(value: Double(sender.text ?? "0.0") ?? 0.0)
+        interactor?.calcHeightToWater(value: Double(sender.text?.replacingOccurrences(of: ",", with: ".") ?? "0.0") ?? 0.0)
     }
     
     @objc private func touchViewAction() {

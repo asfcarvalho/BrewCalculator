@@ -16,6 +16,7 @@ import UIKit
 protocol SettingRouterProtocol {
     
     static func createViewController() -> UIViewController
+    func showAlert(with message: String, viewController: UIViewController)
 }
 
 protocol SettingInteractorInputProtocol {
@@ -31,6 +32,8 @@ protocol SettingInteractorInputProtocol {
 protocol SettingInteractorOutputProtocol {
     //Interactor -> Protocol
     func getSetting(setting: Setting)
+    func savedSuccess(message: String)
+    func savedFailure(message: String)
 }
 
 protocol SettingPresenterProtocol {
@@ -41,9 +44,11 @@ protocol SettingPresenterProtocol {
 protocol SettingViewControllerProtocol {
     //Presenter -> ViewController
     func getSetting(setting: String)
+    func savedSuccess(message: String)
+    func savedFailure(message: String)
 }
 
-protocol SettingWorkerInputProtocol {
+protocol SettingWorkerInputProtocol: class {
     var interactor: SettingWorkerOutputProtocol? { get set }
     
     //Interactor -> Worker
@@ -55,4 +60,6 @@ protocol SettingWorkerOutputProtocol {
     
     //Worker -> Interactor
     func getSetting(setting: Setting)
+    func savedSuccess(message: String)
+    func savedFailure(message: String)
 }
