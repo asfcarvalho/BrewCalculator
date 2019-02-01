@@ -23,17 +23,51 @@ class SettingViewController: UIViewController {
         self.view = settingView
 
         let touchView = UITapGestureRecognizer(target: self, action: #selector(touchViewAction))
-        settingView?.addGestureRecognizer(touchView)
-        settingView?.isUserInteractionEnabled = true
+        settingView?.viewMain.addGestureRecognizer(touchView)
+        settingView?.viewMain.isUserInteractionEnabled = true
         
         settingView?.saveButton.addTarget(self, action: #selector(saveAction), for: .touchUpInside)
+        
+        settingView?.rayText.addTarget(self, action: #selector(textEditBegin(_:)), for: .editingDidBegin)
+        settingView?.rayText.addTarget(self, action: #selector(textEditEnd(_:)), for: .editingDidEnd)
+        
+        settingView?.sodaPercentageText.addTarget(self, action: #selector(textEditBegin(_:)), for: .editingDidBegin)
+        settingView?.sodaPercentageText.addTarget(self, action: #selector(textEditEnd(_:)), for: .editingDidEnd)
+        
+        settingView?.sodaProportionText.addTarget(self, action: #selector(textEditBegin(_:)), for: .editingDidBegin)
+        settingView?.sodaProportionText.addTarget(self, action: #selector(textEditEnd(_:)), for: .editingDidEnd)
+        
+        settingView?.pacPercentageText.addTarget(self, action: #selector(textEditBegin(_:)), for: .editingDidBegin)
+        settingView?.pacPercentageText.addTarget(self, action: #selector(textEditEnd(_:)), for: .editingDidEnd)
+        
+        settingView?.iodinePercentageText.addTarget(self, action: #selector(textEditBegin(_:)), for: .editingDidBegin)
+        settingView?.iodinePercentageText.addTarget(self, action: #selector(textEditEnd(_:)), for: .editingDidEnd)
         
         //get settings
         interactor?.getSetting()
     }
+    
+    @objc func textEditEnd(_ sender: UITextField) {
+        settingView?.viewMain.frame.origin.y = 0
+    }
+    
+    @objc func textEditBegin(_ sender: UITextField) {
+        guard let y = sender.superview?.frame.origin.y,
+            let height = sender.superview?.frame.size.height else {
+                return
+        }
+        
+        if y + height > (settingView?.frame.height ?? 0.0) - 220.0 {
+            settingView?.viewMain.frame.origin.y = -155
+        }
+    }
 
     @objc private func touchViewAction() {
         settingView?.rayText.endEditing(true)
+        settingView?.sodaProportionText.endEditing(true)
+        settingView?.sodaPercentageText.endEditing(true)
+        settingView?.iodinePercentageText.endEditing(true)
+        settingView?.pacPercentageText.endEditing(true)
     }
     
     @objc private func saveAction() {

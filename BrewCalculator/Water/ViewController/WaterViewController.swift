@@ -27,15 +27,19 @@ class WaterViewController: UIViewController {
         
         waterView?.waterVolumeText.addTarget(self, action: #selector(waterVolumeTextChange(_:)), for: .editingChanged)
         waterView?.waterVolumeText.addTarget(self, action: #selector(textBeginChange(_:)), for: .editingDidBegin)
+        waterView?.waterVolumeText.addTarget(self, action: #selector(textEndingChange(_:)), for: .editingDidEnd)
         
         waterView?.waterHeightTextHeightHeightToWater.addTarget(self, action: #selector(waterHeightTextChange(_:)), for: .editingChanged)
         waterView?.waterHeightTextHeightHeightToWater.addTarget(self, action: #selector(textBeginChange(_:)), for: .editingDidBegin)
+        waterView?.waterHeightTextHeightHeightToWater.addTarget(self, action: #selector(textEndingChange(_:)), for: .editingDidEnd)
         
         waterView?.waterVolumeSodaText.addTarget(self, action: #selector(waterSodaVolumeTextChange(_:)), for: .editingChanged)
         waterView?.waterVolumeSodaText.addTarget(self, action: #selector(textBeginChange(_:)), for: .editingDidBegin)
+        waterView?.waterVolumeSodaText.addTarget(self, action: #selector(textEndingChange(_:)), for: .editingDidEnd)
         
         waterView?.waterVolumePacText.addTarget(self, action: #selector(waterPacVolumeTextChange(_:)), for: .editingChanged)
         waterView?.waterVolumePacText.addTarget(self, action: #selector(textBeginChange(_:)), for: .editingDidBegin)
+        waterView?.waterVolumePacText.addTarget(self, action: #selector(textEndingChange(_:)), for: .editingDidEnd)
         
         waterView?.waterVolumeIodineText.addTarget(self, action: #selector(waterIodineVolumeTextChange(_:)), for: .editingChanged)
         waterView?.waterVolumeIodineText.addTarget(self, action: #selector(textBeginChange(_:)), for: .editingDidBegin)
@@ -68,8 +72,18 @@ class WaterViewController: UIViewController {
             return
         }
         
-        if y + height > (waterView?.frame.height ?? 0.0) - 155.0 {
+        if y + height > (waterView?.frame.height ?? 0.0) - 220.0 {
             waterView?.viewMain.frame.origin.y = -155
+            
+//            let movementDuration:TimeInterval = 0.3
+//            let movement:CGFloat = -155 //( up ? -moveValue : moveValue)
+//            UIView.beginAnimations( "animateView", context: nil)
+//            UIView.setAnimationBeginsFromCurrentState(true)
+//            UIView.setAnimationDuration(movementDuration )
+//            waterView?.scrollMain.scrollRectToVisible(sender.superview?.superview?.superview?.frame ?? CGRect(x: 0, y: 0, width: 0, height: 0), animated: true)
+////            waterView?.viewMain.frame = waterView?.viewMain.frame.offsetBy(dx: 0, dy: movement) ?? CGRect(x: 0, y: 0, width: 0, height: 0)
+////            self.view.frame = CGRectOffset(self.view.frame, 0,  movement)
+//            UIView.commitAnimations()
         }
         
         

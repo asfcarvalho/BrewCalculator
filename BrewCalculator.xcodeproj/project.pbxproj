@@ -12,6 +12,7 @@
 		C4010C3422033651000989BE /* WaterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4010C3322033651000989BE /* WaterWorker.swift */; };
 		C448FA842204792F00D4D35F /* PacCalculationComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448FA832204792F00D4D35F /* PacCalculationComponents.swift */; };
 		C448FA8622047BCE00D4D35F /* IodineCalculationComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448FA8522047BCE00D4D35F /* IodineCalculationComponents.swift */; };
+		C448FA882204D9CC00D4D35F /* SettingComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448FA872204D9CC00D4D35F /* SettingComponents.swift */; };
 		C488EC7F2201E64D00D35312 /* WaterToHightComponets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC7E2201E64D00D35312 /* WaterToHightComponets.swift */; };
 		C488EC832201E76900D35312 /* HightToWaterComponets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC822201E76900D35312 /* HightToWaterComponets.swift */; };
 		C488EC862202176400D35312 /* WaterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC852202176400D35312 /* WaterInteractor.swift */; };
@@ -64,6 +65,7 @@
 		C4010C3322033651000989BE /* WaterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterWorker.swift; sourceTree = "<group>"; };
 		C448FA832204792F00D4D35F /* PacCalculationComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacCalculationComponents.swift; sourceTree = "<group>"; };
 		C448FA8522047BCE00D4D35F /* IodineCalculationComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IodineCalculationComponents.swift; sourceTree = "<group>"; };
+		C448FA872204D9CC00D4D35F /* SettingComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingComponents.swift; sourceTree = "<group>"; };
 		C488EC7E2201E64D00D35312 /* WaterToHightComponets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterToHightComponets.swift; sourceTree = "<group>"; };
 		C488EC822201E76900D35312 /* HightToWaterComponets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HightToWaterComponets.swift; sourceTree = "<group>"; };
 		C488EC852202176400D35312 /* WaterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterInteractor.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				C488EC95220230E600D35312 /* SettingView.swift */,
+				C448FA872204D9CC00D4D35F /* SettingComponents.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 				C4B8283F22007F5F00645513 /* BrewTabBarController.swift in Sources */,
 				C4B8283A22007ACA00645513 /* WaterView.swift in Sources */,
 				C4010C3422033651000989BE /* WaterWorker.swift in Sources */,
+				C448FA882204D9CC00D4D35F /* SettingComponents.swift in Sources */,
 				C488EC9B220246E600D35312 /* SettingWorker.swift in Sources */,
 				C4B8283D22007B5C00645513 /* WaterProtocol.swift in Sources */,
 				C488ECA422024FCC00D35312 /* SettingPresenter.swift in Sources */,
