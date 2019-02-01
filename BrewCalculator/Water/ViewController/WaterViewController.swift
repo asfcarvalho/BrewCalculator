@@ -22,18 +22,57 @@ class WaterViewController: UIViewController {
         self.view = waterView
         
         let touchView = UITapGestureRecognizer(target: self, action: #selector(touchViewAction))
-        waterView?.addGestureRecognizer(touchView)
-        waterView?.isUserInteractionEnabled = true
+        waterView?.viewMain.addGestureRecognizer(touchView)
+        waterView?.viewMain.isUserInteractionEnabled = true
         
         waterView?.waterVolumeText.addTarget(self, action: #selector(waterVolumeTextChange(_:)), for: .editingChanged)
+        waterView?.waterVolumeText.addTarget(self, action: #selector(textBeginChange(_:)), for: .editingDidBegin)
+        
         waterView?.waterHeightTextHeightHeightToWater.addTarget(self, action: #selector(waterHeightTextChange(_:)), for: .editingChanged)
+        waterView?.waterHeightTextHeightHeightToWater.addTarget(self, action: #selector(textBeginChange(_:)), for: .editingDidBegin)
+        
         waterView?.waterVolumeSodaText.addTarget(self, action: #selector(waterSodaVolumeTextChange(_:)), for: .editingChanged)
+        waterView?.waterVolumeSodaText.addTarget(self, action: #selector(textBeginChange(_:)), for: .editingDidBegin)
+        
+        waterView?.waterVolumePacText.addTarget(self, action: #selector(waterPacVolumeTextChange(_:)), for: .editingChanged)
+        waterView?.waterVolumePacText.addTarget(self, action: #selector(textBeginChange(_:)), for: .editingDidBegin)
+        
+        waterView?.waterVolumeIodineText.addTarget(self, action: #selector(waterIodineVolumeTextChange(_:)), for: .editingChanged)
+        waterView?.waterVolumeIodineText.addTarget(self, action: #selector(textBeginChange(_:)), for: .editingDidBegin)
+        waterView?.waterVolumeIodineText.addTarget(self, action: #selector(textEndingChange(_:)), for: .editingDidEnd)
+
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self);
+    }
+    
+    @objc func keyboardWillHide(sender: NSNotification) {
+        self.view.frame.origin.y = 0 // Move view to original position
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         interactor?.getSetting()
+    }
+    
+    @objc private func textEndingChange(_ sender: UITextField) {
+        waterView?.viewMain.frame.origin.y = 0
+    }
+    
+    @objc private func textBeginChange(_ sender: UITextField) {
+        
+        guard let y = sender.superview?.superview?.superview?.frame.origin.y,
+              let height = sender.superview?.superview?.superview?.frame.size.height else {
+            return
+        }
+        
+        if y + height > (waterView?.frame.height ?? 0.0) - 155.0 {
+            waterView?.viewMain.frame.origin.y = -155
+        }
+        
+        
     }
     
     @objc private func waterVolumeTextChange(_ sender: UITextField) {
@@ -48,19 +87,30 @@ class WaterViewController: UIViewController {
         interactor?.calcSodaValue(value: Double(sender.text?.replacingOccurrences(of: ",", with: ".") ?? "0.0") ?? 0.0)
     }
     
+    @objc private func waterPacVolumeTextChange(_ sender: UITextField) {
+        interactor?.calcPacValue(value: Double(sender.text?.replacingOccurrences(of: ",", with: ".") ?? "0.0") ?? 0.0)
+    }
+    
+    @objc private func waterIodineVolumeTextChange(_ sender: UITextField) {
+        interactor?.calcIodineValue(value: Double(sender.text?.replacingOccurrences(of: ",", with: ".") ?? "0.0") ?? 0.0)
+    }
+    
     @objc private func touchViewAction() {
         waterView?.waterVolumeText.endEditing(true)
         waterView?.waterHeightTextHeightHeightToWater.endEditing(true)
+        waterView?.waterVolumeSodaText.endEditing(true)
+        waterView?.waterVolumePacText.endEditing(true)
+        waterView?.waterVolumeIodineText.endEditing(true)
     }
 }
 
 extension WaterViewController: WaterViewControllerProtocol {
     func showPacValue(value: Double) {
-        
+        waterView?.pacVolumeText.text = value.description
     }
     
     func showIodineValue(value: Double) {
-        
+        waterView?.iodineVolumeText.text = value.description
     }
     
     func showSodaVolume(value: Double) {

@@ -10,6 +10,18 @@ import UIKit
 
 class SettingView: UIView {
     
+    var viewMain: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.clear
+        return view
+    }()
+    
+    var scrollMain: UIScrollView = {
+        let scroll = UIScrollView()
+        
+        return scroll
+    }()
+    
     var viewRay: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(red: 233/255, green: 140/255, blue: 1/255, alpha: 1.0)
@@ -154,17 +166,24 @@ class SettingView: UIView {
         viewIodinePercentage.addSubview(iodinePercentageLabel)
         viewIodinePercentage.addSubview(iodinePercentageText)
         
-        self.addSubview(viewRay)
-        self.addSubview(viewSodaPercentage)
-        self.addSubview(viewSodaProportion)
-        self.addSubview(viewPACPercentage)
-        self.addSubview(viewIodinePercentage)
-        self.addSubview(saveButton)
+        viewMain.addSubview(viewRay)
+        viewMain.addSubview(viewSodaPercentage)
+        viewMain.addSubview(viewSodaProportion)
+        viewMain.addSubview(viewPACPercentage)
+        viewMain.addSubview(viewIodinePercentage)
+        viewMain.addSubview(saveButton)
+        scrollMain.addSubview(viewMain)
+        self.addSubview(scrollMain)
     }
     
     //This function make the ray view anchor configuration
     fileprivate func setupRayAnchor() {
-        viewRay.anchor(top: self.safeAreaLayoutGuide.topAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16), size: CGSize(width: self.frame.width, height: 60))
+        
+        scrollMain.anchor(top: self.safeAreaLayoutGuide.topAnchor, leading: self.leadingAnchor, bottom: self.safeAreaLayoutGuide.bottomAnchor, trailing: self.trailingAnchor)
+        
+        viewMain.anchor(top: scrollMain.topAnchor, leading: self.leadingAnchor, bottom: scrollMain.bottomAnchor, trailing: self.trailingAnchor)
+        
+        viewRay.anchor(top: viewMain.safeAreaLayoutGuide.topAnchor, leading: viewMain.leadingAnchor, bottom: nil, trailing: viewMain.trailingAnchor, padding: UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16), size: CGSize(width: viewMain.frame.width, height: 60))
         
         rayLabel.anchor(top: viewRay.topAnchor, leading: viewRay.leadingAnchor, bottom: nil, trailing: viewRay.trailingAnchor, padding: UIEdgeInsets(top: 4, left: 8, bottom: 0, right: 8), size: CGSize(width: viewRay.frame.width, height: 20))
         
@@ -173,13 +192,13 @@ class SettingView: UIView {
     
     //This function make the soda view anchor configuration
     fileprivate func setupSodaAnchor() {
-        viewSodaPercentage.anchor(top: viewRay.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 32, left: 16, bottom: 0, right: 16), size: CGSize(width: self.frame.width, height: 60))
+        viewSodaPercentage.anchor(top: viewRay.bottomAnchor, leading: viewMain.leadingAnchor, bottom: nil, trailing: viewMain.trailingAnchor, padding: UIEdgeInsets(top: 32, left: 16, bottom: 0, right: 16), size: CGSize(width: viewMain.frame.width, height: 60))
         
         sodaPercentageLabel.anchor(top: viewSodaPercentage.topAnchor, leading: viewSodaPercentage.leadingAnchor, bottom: nil, trailing: viewSodaPercentage.trailingAnchor, padding: UIEdgeInsets(top: 4, left: 8, bottom: 0, right: 8), size: CGSize(width: viewSodaPercentage.frame.width, height: 20))
         
         sodaPercentageText.anchor(top: sodaPercentageLabel.bottomAnchor, leading: viewSodaPercentage.leadingAnchor, bottom: viewSodaPercentage.bottomAnchor, trailing: viewSodaPercentage.trailingAnchor, padding: UIEdgeInsets(top: 4, left: 8, bottom: 0, right: 8))
         
-        viewSodaProportion.anchor(top: viewSodaPercentage.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 32, left: 16, bottom: 0, right: 16), size: CGSize(width: self.frame.width, height: 60))
+        viewSodaProportion.anchor(top: viewSodaPercentage.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: viewMain.trailingAnchor, padding: UIEdgeInsets(top: 32, left: 16, bottom: 0, right: 16), size: CGSize(width: viewMain.frame.width, height: 60))
         
         sodaProportionLabel.anchor(top: viewSodaProportion.topAnchor, leading: viewSodaProportion.leadingAnchor, bottom: nil, trailing: viewSodaProportion.trailingAnchor, padding: UIEdgeInsets(top: 4, left: 8, bottom: 0, right: 8), size: CGSize(width: viewSodaProportion.frame.width, height: 20))
         
@@ -188,7 +207,7 @@ class SettingView: UIView {
     
     //This function make the PAC view anchor configuration
     fileprivate func setupPACAnchor() {
-        viewPACPercentage.anchor(top: viewSodaProportion.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 32, left: 16, bottom: 0, right: 16), size: CGSize(width: self.frame.width, height: 60))
+        viewPACPercentage.anchor(top: viewSodaProportion.bottomAnchor, leading: viewMain.leadingAnchor, bottom: nil, trailing: viewMain.trailingAnchor, padding: UIEdgeInsets(top: 32, left: 16, bottom: 0, right: 16), size: CGSize(width: viewMain.frame.width, height: 60))
         
         pacPercentageLabel.anchor(top: viewPACPercentage.topAnchor, leading: viewPACPercentage.leadingAnchor, bottom: nil, trailing: viewPACPercentage.trailingAnchor, padding: UIEdgeInsets(top: 4, left: 8, bottom: 0, right: 8))
         
@@ -198,13 +217,13 @@ class SettingView: UIView {
     //This function make the iodine view anchor configuration
     private func setupIodineAnchor() {
 
-        viewIodinePercentage.anchor(top: viewPACPercentage.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 32, left: 16, bottom: 0, right: 16), size: CGSize(width: self.frame.width, height: 60))
+        viewIodinePercentage.anchor(top: viewPACPercentage.bottomAnchor, leading: viewMain.leadingAnchor, bottom: nil, trailing: viewMain.trailingAnchor, padding: UIEdgeInsets(top: 32, left: 16, bottom: 0, right: 16), size: CGSize(width: viewMain.frame.width, height: 60))
         
         iodinePercentageLabel.anchor(top: viewIodinePercentage.topAnchor, leading: viewIodinePercentage.leadingAnchor, bottom: nil, trailing: viewIodinePercentage.trailingAnchor, padding: UIEdgeInsets(top: 4, left: 8, bottom: 0, right: 8), size: CGSize(width: viewIodinePercentage.frame.width, height: 20))
         
         iodinePercentageText.anchor(top: iodinePercentageLabel.bottomAnchor, leading: viewIodinePercentage.leadingAnchor, bottom: viewIodinePercentage.bottomAnchor, trailing: viewIodinePercentage.trailingAnchor, padding: UIEdgeInsets(top: 4, left: 8, bottom: 0, right: 8))
         
-        saveButton.anchor(top: viewIodinePercentage.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 32, left: 16, bottom: 0, right: 16), size: CGSize(width: self.frame.width, height: 50))
+        saveButton.anchor(top: viewIodinePercentage.bottomAnchor, leading: viewMain.leadingAnchor, bottom: viewMain.bottomAnchor, trailing: viewMain.trailingAnchor, padding: UIEdgeInsets(top: 32, left: 16, bottom: 16, right: 16), size: CGSize(width: viewMain.frame.width, height: 50))
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -23,6 +23,6 @@ extension SettingPresenter: SettingInteractorOutputProtocol {
     }
     
     func getSetting(setting: Setting) {
-        viewController?.getSetting(setting: setting.ray?.description ?? "")
+        viewController?.getSetting(setting: setting)
     }
 }

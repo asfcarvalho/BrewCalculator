@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WaterView: SodaCalculationComponets {
+class WaterView: IodineCalculationComponents {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -18,13 +18,98 @@ class WaterView: SodaCalculationComponets {
         createViewWaterToHeight()
         createViewHeightToWater()
         createSodaCalculationView()
+        createPACCalculationView()
+        createIodineCalculationView()
         
         stackViewWaterToHeightSetup()
         stackViewHeightToWaterSetup()
         stackViewSodaCalculationAnchor()
+        stackViewPacCalculationAnchor()
+        stackViewIodineCalculationAnchor()
     }
     
-    //This function create the soca calculation view
+    //This function create the iodine calculation view
+    private func createIodineCalculationView() {
+        
+        viewWaterIodine.addSubview(waterVolumeIodineLabel)
+        viewWaterIodine.addSubview(waterVolumeIodineText)
+        
+        viewIodineValue.addSubview(iodineVolumeLabel)
+        viewIodineValue.addSubview(iodineVolumeText)
+        
+        stackViewIodine.addArrangedSubview(viewWaterIodine)
+        stackViewIodine.addArrangedSubview(viewIodineValue)
+        iodineView.addSubview(stackViewIodine)
+        
+        viewMain.addSubview(iodineLabel)
+        viewMain.addSubview(iodineView)
+        scrollMain.addSubview(viewMain)
+        self.addSubview(scrollMain)
+    }
+    
+    //This function make the iodine calculation anchor
+    private func stackViewIodineCalculationAnchor() {
+        iodineLabel.anchor(top: pacView.bottomAnchor, leading: viewMain.leadingAnchor, bottom: nil, trailing: viewMain.trailingAnchor, padding: UIEdgeInsets(top: 32, left: 16, bottom: 0, right: 16), size: CGSize(width: viewMain.frame.width, height: 25))
+        
+        iodineView.anchor(top: iodineLabel.bottomAnchor, leading: self.leadingAnchor, bottom: viewMain.bottomAnchor, trailing: viewMain.trailingAnchor, padding: UIEdgeInsets(top: 8, left: 16, bottom: 16, right: 16), size: CGSize(width: viewMain.frame.width, height: 60))
+        
+        stackViewIodine.anchor(top: iodineView.topAnchor, leading: iodineView.leadingAnchor, bottom: iodineView.bottomAnchor, trailing: iodineView.trailingAnchor)
+        
+        viewWaterIodine.anchor(top: stackViewIodine.topAnchor, leading: stackViewIodine.leadingAnchor, bottom: stackViewIodine.bottomAnchor, trailing: nil, size: CGSize(width: stackViewIodine.frame.width / 2, height: stackViewIodine.frame.height))
+        
+        waterVolumeIodineLabel.anchor(top: viewWaterIodine.topAnchor, leading: viewWaterIodine.leadingAnchor, bottom: nil, trailing: viewWaterIodine.trailingAnchor, padding: UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8), size: CGSize(width: viewWaterIodine.frame.width, height: 20))
+        
+        waterVolumeIodineText.anchor(top: waterVolumeIodineLabel.bottomAnchor, leading: viewWaterIodine.leadingAnchor, bottom: viewWaterIodine.bottomAnchor, trailing: viewWaterIodine.trailingAnchor, padding: UIEdgeInsets(top: 4, left: 8, bottom: 0, right: 8))
+        
+        viewIodineValue.anchor(top: stackViewIodine.topAnchor, leading: viewWaterIodine.trailingAnchor, bottom: stackViewIodine.bottomAnchor, trailing: stackViewIodine.trailingAnchor)
+        
+        iodineVolumeLabel.anchor(top: viewIodineValue.topAnchor, leading: viewIodineValue.leadingAnchor, bottom: nil, trailing: viewIodineValue.trailingAnchor, padding: UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8), size: CGSize(width: viewIodineValue.frame.width, height: 20))
+        
+        iodineVolumeText.anchor(top: iodineVolumeLabel.bottomAnchor, leading: viewIodineValue.leadingAnchor, bottom: viewIodineValue.bottomAnchor, trailing: viewIodineValue.trailingAnchor, padding: UIEdgeInsets(top: 4, left: 8, bottom: 0, right: 8))
+    }
+    
+    //This function create the pac calculation view
+    private func createPACCalculationView() {
+        
+        viewWaterPac.addSubview(waterVolumePacLabel)
+        viewWaterPac.addSubview(waterVolumePacText)
+        
+        viewPacValue.addSubview(pacVolumeLabel)
+        viewPacValue.addSubview(pacVolumeText)
+        
+        stackViewPac.addArrangedSubview(viewWaterPac)
+        stackViewPac.addArrangedSubview(viewPacValue)
+        pacView.addSubview(stackViewPac)
+        
+        viewMain.addSubview(pacLabel)
+        viewMain.addSubview(pacView)
+        scrollMain.addSubview(viewMain)
+        
+        self.addSubview(scrollMain)
+    }
+    
+    //This function make the pac calculation anchor
+    private func stackViewPacCalculationAnchor() {
+        pacLabel.anchor(top: sodaView.bottomAnchor, leading: viewMain.leadingAnchor, bottom: nil, trailing: viewMain.trailingAnchor, padding: UIEdgeInsets(top: 32, left: 16, bottom: 0, right: 16), size: CGSize(width: viewMain.frame.width, height: 25))
+        
+        pacView.anchor(top: pacLabel.bottomAnchor, leading: viewMain.leadingAnchor, bottom: nil, trailing: viewMain.trailingAnchor, padding: UIEdgeInsets(top: 8, left: 16, bottom: 0, right: 16), size: CGSize(width: viewMain.frame.width, height: 60))
+        
+        stackViewPac.anchor(top: pacView.topAnchor, leading: pacView.leadingAnchor, bottom: pacView.bottomAnchor, trailing: pacView.trailingAnchor)
+        
+        viewWaterPac.anchor(top: stackViewPac.topAnchor, leading: stackViewPac.leadingAnchor, bottom: stackViewPac.bottomAnchor, trailing: nil, size: CGSize(width: stackViewPac.frame.width / 2, height: stackViewPac.frame.height))
+        
+        waterVolumePacLabel.anchor(top: viewWaterPac.topAnchor, leading: viewWaterPac.leadingAnchor, bottom: nil, trailing: viewWaterPac.trailingAnchor, padding: UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8), size: CGSize(width: viewWaterPac.frame.width, height: 20))
+        
+        waterVolumePacText.anchor(top: waterVolumePacLabel.bottomAnchor, leading: viewWaterPac.leadingAnchor, bottom: viewWaterPac.bottomAnchor, trailing: viewWaterPac.trailingAnchor, padding: UIEdgeInsets(top: 4, left: 8, bottom: 0, right: 8))
+        
+        viewPacValue.anchor(top: stackViewPac.topAnchor, leading: viewWaterPac.trailingAnchor, bottom: stackViewPac.bottomAnchor, trailing: stackViewPac.trailingAnchor)
+        
+        pacVolumeLabel.anchor(top: viewPacValue.topAnchor, leading: viewPacValue.leadingAnchor, bottom: nil, trailing: viewPacValue.trailingAnchor, padding: UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8), size: CGSize(width: viewPacValue.frame.width, height: 20))
+        
+        pacVolumeText.anchor(top: pacVolumeLabel.bottomAnchor, leading: viewPacValue.leadingAnchor, bottom: viewPacValue.bottomAnchor, trailing: viewPacValue.trailingAnchor, padding: UIEdgeInsets(top: 4, left: 8, bottom: 0, right: 8))
+    }
+    
+    //This function create the soda calculation view
     private func createSodaCalculationView() {
         
         viewWaterSoda.addSubview(waterVolumeSodaLabel)
@@ -37,17 +122,20 @@ class WaterView: SodaCalculationComponets {
         stackViewSoda.addArrangedSubview(viewSodaValue)
         sodaView.addSubview(stackViewSoda)
         
-        self.addSubview(sodaLabel)
-        self.addSubview(sodaView)
+        viewMain.addSubview(sodaLabel)
+        viewMain.addSubview(sodaView)
+        scrollMain.addSubview(viewMain)
+        
+        self.addSubview(scrollMain)
     }
     
     
     
     //This function make the soda calculation anchor
     private func stackViewSodaCalculationAnchor() {
-        sodaLabel.anchor(top: viewHeightToWater.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 32, left: 16, bottom: 0, right: 16), size: CGSize(width: self.frame.width, height: 25))
+        sodaLabel.anchor(top: viewHeightToWater.bottomAnchor, leading: viewMain.leadingAnchor, bottom: nil, trailing: viewMain.trailingAnchor, padding: UIEdgeInsets(top: 32, left: 16, bottom: 0, right: 16), size: CGSize(width: viewMain.frame.width, height: 25))
         
-        sodaView.anchor(top: sodaLabel.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 8, left: 16, bottom: 0, right: 16), size: CGSize(width: self.frame.width, height: 60))
+        sodaView.anchor(top: sodaLabel.bottomAnchor, leading: viewMain.leadingAnchor, bottom: nil, trailing: viewMain.trailingAnchor, padding: UIEdgeInsets(top: 8, left: 16, bottom: 0, right: 16), size: CGSize(width: viewMain.frame.width, height: 60))
         
         stackViewSoda.anchor(top: sodaView.topAnchor, leading: sodaView.leadingAnchor, bottom: sodaView.bottomAnchor, trailing: sodaView.trailingAnchor)
         
@@ -77,8 +165,12 @@ class WaterView: SodaCalculationComponets {
         
         viewWater.addSubview(stackView)
         
-        self.addSubview(waterLabel)
-        self.addSubview(viewWater)
+        viewMain.addSubview(waterLabel)
+        viewMain.addSubview(viewWater)
+        scrollMain.addSubview(viewMain)
+        
+        self.addSubview(scrollMain)
+        
     }
     
     //This function create the height to water view
@@ -94,15 +186,18 @@ class WaterView: SodaCalculationComponets {
         stackViewHeightHeightToWater.addArrangedSubview(viewHeightHeightToWater)
         viewHeightToWater.addSubview(stackViewHeightHeightToWater)
         
-        self.addSubview(heightLabel)
-        self.addSubview(viewHeightToWater)
+        viewMain.addSubview(heightLabel)
+        viewMain.addSubview(viewHeightToWater)
+        scrollMain.addSubview(viewMain)
+        
+        self.addSubview(scrollMain)
     }
     
     //this function make the height to water setup anchor
     private func stackViewHeightToWaterSetup() {
-        heightLabel.anchor(top: viewWater.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 32, left: 16, bottom: 0, right: 16), size: CGSize(width: self.frame.width, height: 25))
+        heightLabel.anchor(top: viewWater.bottomAnchor, leading: viewMain.leadingAnchor, bottom: nil, trailing: viewMain.trailingAnchor, padding: UIEdgeInsets(top: 32, left: 16, bottom: 0, right: 16), size: CGSize(width: viewMain.frame.width, height: 25))
         
-        viewHeightToWater.anchor(top: heightLabel.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 8, left: 16, bottom: 0, right: 16), size: CGSize(width: self.frame.width, height: 60))
+        viewHeightToWater.anchor(top: heightLabel.bottomAnchor, leading: viewMain.leadingAnchor, bottom: nil, trailing: viewMain.trailingAnchor, padding: UIEdgeInsets(top: 8, left: 16, bottom: 0, right: 16), size: CGSize(width: viewMain.frame.width, height: 60))
         
         stackViewHeightHeightToWater.anchor(top: viewHeightToWater.topAnchor, leading: viewHeightToWater.leadingAnchor, bottom: viewHeightToWater.bottomAnchor, trailing: viewHeightToWater.trailingAnchor)
         
@@ -122,9 +217,13 @@ class WaterView: SodaCalculationComponets {
     //this funcion make the water to height setup anchor
     private func stackViewWaterToHeightSetup() {
         
-        waterLabel.anchor(top: self.safeAreaLayoutGuide.topAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 16, left: 16, bottom: 8, right: 16), size: CGSize(width: self.frame.width, height: 25))
+        scrollMain.anchor(top: self.safeAreaLayoutGuide.topAnchor, leading: self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.safeAreaLayoutGuide.trailingAnchor)
+        
+        viewMain.anchor(top: scrollMain.topAnchor, leading: self.leadingAnchor, bottom: scrollMain.bottomAnchor, trailing: self.trailingAnchor)
+        
+        waterLabel.anchor(top: viewMain.safeAreaLayoutGuide.topAnchor, leading: viewMain.leadingAnchor, bottom: nil, trailing: viewMain.trailingAnchor, padding: UIEdgeInsets(top: 16, left: 16, bottom: 8, right: 16), size: CGSize(width: viewMain.frame.width, height: 25))
 
-        viewWater.anchor(top: waterLabel.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 8, left: 16, bottom: 0, right: 16), size: CGSize(width: self.frame.width, height: 60))
+        viewWater.anchor(top: waterLabel.bottomAnchor, leading: viewMain.leadingAnchor, bottom: nil, trailing: viewMain.trailingAnchor, padding: UIEdgeInsets(top: 8, left: 16, bottom: 0, right: 16), size: CGSize(width: viewMain.frame.width, height: 60))
         
         stackView.anchor(top: viewWater.topAnchor, leading: viewWater.leadingAnchor, bottom: viewWater.bottomAnchor, trailing: viewWater.trailingAnchor)
         

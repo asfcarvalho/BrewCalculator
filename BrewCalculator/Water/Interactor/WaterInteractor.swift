@@ -40,25 +40,25 @@ class WaterInteractor: WaterInteractorInputProtocol {
         let sodaPercentage = setting?.sodaPercentage ?? 0.0 //constant
         
         let soda = 100.0 / sodaPercentage
-        let sodaProportion = setting?.sodaProportion ?? 0.0 / 100 //constant
+        let sodaProportion = (setting?.sodaProportion ?? 0.0) / 100.0 //constant
         
         let volume = (value * sodaProportion) * soda
         print(volume)
-        presenter?.showSodaVolume(value: volume)
+        presenter?.showSodaVolume(value: Double(String(format: "%.2f", volume)) ?? 0.0)
     }
     
     func calcPacValue(value: Double) {
-        let pacPercentage = setting?.pacPercentage ?? 0.0 / 100.0
+        let pacPercentage = (setting?.pacPercentage ?? 0.0) / 100.0
         let volume = pacPercentage * value
         
-        presenter?.showPacValue(value: volume)
+        presenter?.showPacValue(value: Double(String(format: "%.2f", volume)) ?? 0.0)
     }
     
     func calcIodineValue(value: Double) {
-        let iodinePercentage = setting?.iodinePercentage ?? 0.0 / 100.0
+        let iodinePercentage = (setting?.iodinePercentage ?? 0.0) / 100.0
         let volume = value * iodinePercentage
         
-        presenter?.showIodineValue(value: volume)
+        presenter?.showIodineValue(value: Double(String(format: "%.2f", volume)) ?? 0.0)
     }
     
     func getSetting() {

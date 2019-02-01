@@ -10,6 +10,8 @@
 		C4010C30220320EC000989BE /* Paramters+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4010C2E220320EC000989BE /* Paramters+CoreDataClass.swift */; };
 		C4010C31220320EC000989BE /* Paramters+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4010C2F220320EC000989BE /* Paramters+CoreDataProperties.swift */; };
 		C4010C3422033651000989BE /* WaterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4010C3322033651000989BE /* WaterWorker.swift */; };
+		C448FA842204792F00D4D35F /* PacCalculationComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448FA832204792F00D4D35F /* PacCalculationComponents.swift */; };
+		C448FA8622047BCE00D4D35F /* IodineCalculationComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448FA8522047BCE00D4D35F /* IodineCalculationComponents.swift */; };
 		C488EC7F2201E64D00D35312 /* WaterToHightComponets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC7E2201E64D00D35312 /* WaterToHightComponets.swift */; };
 		C488EC832201E76900D35312 /* HightToWaterComponets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC822201E76900D35312 /* HightToWaterComponets.swift */; };
 		C488EC862202176400D35312 /* WaterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488EC852202176400D35312 /* WaterInteractor.swift */; };
@@ -60,6 +62,8 @@
 		C4010C2E220320EC000989BE /* Paramters+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Paramters+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C4010C2F220320EC000989BE /* Paramters+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Paramters+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C4010C3322033651000989BE /* WaterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterWorker.swift; sourceTree = "<group>"; };
+		C448FA832204792F00D4D35F /* PacCalculationComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacCalculationComponents.swift; sourceTree = "<group>"; };
+		C448FA8522047BCE00D4D35F /* IodineCalculationComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IodineCalculationComponents.swift; sourceTree = "<group>"; };
 		C488EC7E2201E64D00D35312 /* WaterToHightComponets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterToHightComponets.swift; sourceTree = "<group>"; };
 		C488EC822201E76900D35312 /* HightToWaterComponets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HightToWaterComponets.swift; sourceTree = "<group>"; };
 		C488EC852202176400D35312 /* WaterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterInteractor.swift; sourceTree = "<group>"; };
@@ -318,6 +322,8 @@
 				C488EC7E2201E64D00D35312 /* WaterToHightComponets.swift */,
 				C488EC822201E76900D35312 /* HightToWaterComponets.swift */,
 				C488EC972202387100D35312 /* SodaCalculationComponents.swift */,
+				C448FA832204792F00D4D35F /* PacCalculationComponents.swift */,
+				C448FA8522047BCE00D4D35F /* IodineCalculationComponents.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -469,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C448FA8622047BCE00D4D35F /* IodineCalculationComponents.swift in Sources */,
 				C488ECA122024E6700D35312 /* SettingInteractor.swift in Sources */,
 				C4B82842220081E400645513 /* WaterRouter.swift in Sources */,
 				C4B82807220079EA00645513 /* ViewController.swift in Sources */,
@@ -492,6 +499,7 @@
 				C4B828442200C55300645513 /* UIView+anchors.swift in Sources */,
 				C488EC862202176400D35312 /* WaterInteractor.swift in Sources */,
 				C488EC8F22022FFD00D35312 /* SettingProtocol.swift in Sources */,
+				C448FA842204792F00D4D35F /* PacCalculationComponents.swift in Sources */,
 				C4010C30220320EC000989BE /* Paramters+CoreDataClass.swift in Sources */,
 				C488EC832201E76900D35312 /* HightToWaterComponets.swift in Sources */,
 			);

@@ -9,6 +9,19 @@
 import UIKit
 
 class WaterToHeightComponets: UIView {
+    
+    var viewMain: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.clear
+        return view
+    }()
+    
+    var scrollMain: UIScrollView = {
+        let scroll = UIScrollView()
+        
+        return scroll
+    }()
+    
     var viewWater: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(red: 233/255, green: 140/255, blue: 1/255, alpha: 1.0)

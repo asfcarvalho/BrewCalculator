@@ -43,7 +43,7 @@ protocol SettingPresenterProtocol {
 
 protocol SettingViewControllerProtocol {
     //Presenter -> ViewController
-    func getSetting(setting: String)
+    func getSetting(setting: Setting)
     func savedSuccess(message: String)
     func savedFailure(message: String)
 }
