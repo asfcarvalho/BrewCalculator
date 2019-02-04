@@ -10,6 +10,7 @@
 		C4010C30220320EC000989BE /* Paramters+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4010C2E220320EC000989BE /* Paramters+CoreDataClass.swift */; };
 		C4010C31220320EC000989BE /* Paramters+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4010C2F220320EC000989BE /* Paramters+CoreDataProperties.swift */; };
 		C4010C3422033651000989BE /* WaterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4010C3322033651000989BE /* WaterWorker.swift */; };
+		C40E4D9B2208B57500F109C7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E4D9A2208B57500F109C7 /* BaseViewController.swift */; };
 		C448FA842204792F00D4D35F /* PacCalculationComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448FA832204792F00D4D35F /* PacCalculationComponents.swift */; };
 		C448FA8622047BCE00D4D35F /* IodineCalculationComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448FA8522047BCE00D4D35F /* IodineCalculationComponents.swift */; };
 		C448FA882204D9CC00D4D35F /* SettingComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448FA872204D9CC00D4D35F /* SettingComponents.swift */; };
@@ -63,6 +64,7 @@
 		C4010C2E220320EC000989BE /* Paramters+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Paramters+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C4010C2F220320EC000989BE /* Paramters+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Paramters+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C4010C3322033651000989BE /* WaterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterWorker.swift; sourceTree = "<group>"; };
+		C40E4D9A2208B57500F109C7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C448FA832204792F00D4D35F /* PacCalculationComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacCalculationComponents.swift; sourceTree = "<group>"; };
 		C448FA8522047BCE00D4D35F /* IodineCalculationComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IodineCalculationComponents.swift; sourceTree = "<group>"; };
 		C448FA872204D9CC00D4D35F /* SettingComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingComponents.swift; sourceTree = "<group>"; };
@@ -132,6 +134,14 @@
 				C4010C3322033651000989BE /* WaterWorker.swift */,
 			);
 			path = Worker;
+			sourceTree = "<group>";
+		};
+		C40E4D992208B55800F109C7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C40E4D9A2208B57500F109C7 /* BaseViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		C488EC802201E70700D35312 /* Water */ = {
@@ -276,6 +286,7 @@
 		C4B82803220079EA00645513 /* BrewCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				C40E4D992208B55800F109C7 /* ViewController */,
 				C488EC9C22024C2000D35312 /* Model */,
 				C488EC8A22022F4400D35312 /* Settings */,
 				C488EC812201E71E00D35312 /* View */,
@@ -506,6 +517,7 @@
 				C448FA842204792F00D4D35F /* PacCalculationComponents.swift in Sources */,
 				C4010C30220320EC000989BE /* Paramters+CoreDataClass.swift in Sources */,
 				C488EC832201E76900D35312 /* HightToWaterComponets.swift in Sources */,
+				C40E4D9B2208B57500F109C7 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,13 +8,15 @@
 
 import UIKit
 
-class SettingViewController: UIViewController {
-
+class SettingViewController: BaseViewController {
+    
     var interactor: SettingInteractorInputProtocol?
     var router: SettingRouterProtocol?
+    private var textFiledPosition = CGRect(x: 0, y: 0, width: 0, height: 0)
+    
     
     private var settingView: SettingView?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,40 +30,22 @@ class SettingViewController: UIViewController {
         
         settingView?.saveButton.addTarget(self, action: #selector(saveAction), for: .touchUpInside)
         
-        settingView?.rayText.addTarget(self, action: #selector(textEditBegin(_:)), for: .editingDidBegin)
-        settingView?.rayText.addTarget(self, action: #selector(textEditEnd(_:)), for: .editingDidEnd)
+        settingView?.rayText.addTarget(self, action: #selector(textBeginChange(_:)), for: .editingDidBegin)
         
-        settingView?.sodaPercentageText.addTarget(self, action: #selector(textEditBegin(_:)), for: .editingDidBegin)
-        settingView?.sodaPercentageText.addTarget(self, action: #selector(textEditEnd(_:)), for: .editingDidEnd)
+        settingView?.sodaPercentageText.addTarget(self, action: #selector(textBeginChange(_:)), for: .editingDidBegin)
         
-        settingView?.sodaProportionText.addTarget(self, action: #selector(textEditBegin(_:)), for: .editingDidBegin)
-        settingView?.sodaProportionText.addTarget(self, action: #selector(textEditEnd(_:)), for: .editingDidEnd)
+        settingView?.sodaProportionText.addTarget(self, action: #selector(textBeginChange(_:)), for: .editingDidBegin)
         
-        settingView?.pacPercentageText.addTarget(self, action: #selector(textEditBegin(_:)), for: .editingDidBegin)
-        settingView?.pacPercentageText.addTarget(self, action: #selector(textEditEnd(_:)), for: .editingDidEnd)
+        settingView?.pacPercentageText.addTarget(self, action: #selector(textBeginChange(_:)), for: .editingDidBegin)
         
-        settingView?.iodinePercentageText.addTarget(self, action: #selector(textEditBegin(_:)), for: .editingDidBegin)
-        settingView?.iodinePercentageText.addTarget(self, action: #selector(textEditEnd(_:)), for: .editingDidEnd)
+        settingView?.iodinePercentageText.addTarget(self, action: #selector(textBeginChange(_:)), for: .editingDidBegin)
         
         //get settings
         interactor?.getSetting()
-    }
-    
-    @objc func textEditEnd(_ sender: UITextField) {
-        settingView?.viewMain.frame.origin.y = 0
-    }
-    
-    @objc func textEditBegin(_ sender: UITextField) {
-        guard let y = sender.superview?.frame.origin.y,
-            let height = sender.superview?.frame.size.height else {
-                return
-        }
         
-        if y + height > (settingView?.frame.height ?? 0.0) - 220.0 {
-            settingView?.viewMain.frame.origin.y = -155
-        }
+        setupViewController(viewMain: settingView?.viewMain ?? UIView(), scrollMain: settingView?.scrollMain ?? UIScrollView(), textFiledPosition: textFiledPosition)
     }
-
+    
     @objc private func touchViewAction() {
         settingView?.rayText.endEditing(true)
         settingView?.sodaProportionText.endEditing(true)

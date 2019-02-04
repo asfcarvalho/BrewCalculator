@@ -15,7 +15,7 @@ class WaterRouter: WaterRouterProtocol {
         var interactor: WaterInteractorInputProtocol & WaterWorkerOutputProtocol = WaterInteractor()
         var presenter: WaterPresenterProtocol & WaterInteractorOutputProtocol = WaterPresenter()
         var worker: WaterWorkerInputProtocol & SettingWorkerOutputProtocol = WaterWorker()
-        var settingWorker: SettingWorkerInputProtocol = SettingWorker()
+        let settingWorker: SettingWorkerInputProtocol = SettingWorker()
         
         let viewController = WaterViewController.init(nibName: nil, bundle: nil)
         viewController.interactor = interactor
