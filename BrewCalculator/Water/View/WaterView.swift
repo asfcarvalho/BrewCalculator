@@ -217,7 +217,7 @@ class WaterView: IodineCalculationComponents {
     //this funcion make the water to height setup anchor
     private func stackViewWaterToHeightSetup() {
         
-        scrollMain.anchor(top: self.safeAreaLayoutGuide.topAnchor, leading: self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.safeAreaLayoutGuide.trailingAnchor)
+        scrollMain.anchor(top: self.safeAreaLayoutGuide.topAnchor, leading: self.leadingAnchor, bottom: self.safeAreaLayoutGuide.bottomAnchor, trailing: self.trailingAnchor)
         
         viewMain.anchor(top: scrollMain.topAnchor, leading: self.leadingAnchor, bottom: scrollMain.bottomAnchor, trailing: self.trailingAnchor)
         
