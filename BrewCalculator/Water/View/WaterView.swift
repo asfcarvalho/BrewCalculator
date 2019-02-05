@@ -13,7 +13,7 @@ class WaterView: IodineCalculationComponents {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor(red: 213/255, green: 116/255, blue: 6/255, alpha: 1.0)
+        self.backgroundColor = CustomColor.viewMainBackgroundColor
         
         createViewWaterToHeight()
         createViewHeightToWater()

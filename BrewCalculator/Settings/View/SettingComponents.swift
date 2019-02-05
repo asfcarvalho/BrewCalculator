@@ -23,15 +23,16 @@ class SettingComponents: UIView {
     
     var viewRadius: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 233/255, green: 140/255, blue: 1/255, alpha: 1.0)
-        view.layer.cornerRadius = 8
+        view.backgroundColor = CustomColor.viewColor        
         view.clipsToBounds = true
+        view.configDefault()
         return view
     }()
     
     let radiusLabel: UILabel = {
         let label = UILabel()
         label.text = "Radius"
+        label.textColor = CustomColor.labelColor
         return label
     }()
     
@@ -39,20 +40,23 @@ class SettingComponents: UIView {
         let text = UITextField()
         text.placeholder = "Put de radius value"
         text.keyboardType = .decimalPad
+        text.textColor = CustomColor.textColor
         return text
     }()
     
     var viewSodaPercentage: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 233/255, green: 140/255, blue: 1/255, alpha: 1.0)
+        view.backgroundColor = CustomColor.viewColor
         view.layer.cornerRadius = 8
         view.clipsToBounds = true
+        view.configDefault()
         return view
     }()
     
     let sodaPercentageLabel: UILabel = {
         let label = UILabel()
         label.text = "Soda percentage"
+        label.textColor = CustomColor.labelColor
         return label
     }()
     
@@ -60,12 +64,13 @@ class SettingComponents: UIView {
         let text = UITextField()
         text.placeholder = "Put de soda percentage value"
         text.keyboardType = .decimalPad
+        text.textColor = CustomColor.textColor
         return text
     }()
     
     var viewSodaProportion: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 233/255, green: 140/255, blue: 1/255, alpha: 1.0)
+        view.backgroundColor = CustomColor.viewColor
         view.layer.cornerRadius = 8
         view.clipsToBounds = true
         return view
@@ -74,6 +79,7 @@ class SettingComponents: UIView {
     let sodaProportionLabel: UILabel = {
         let label = UILabel()
         label.text = "Soda proportion"
+        label.textColor = CustomColor.labelColor
         return label
     }()
     
@@ -81,12 +87,13 @@ class SettingComponents: UIView {
         let text = UITextField()
         text.placeholder = "Put de soda proportion value"
         text.keyboardType = .decimalPad
+        text.textColor = CustomColor.textColor
         return text
     }()
     
     var viewPACPercentage: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 233/255, green: 140/255, blue: 1/255, alpha: 1.0)
+        view.backgroundColor = CustomColor.viewColor
         view.layer.cornerRadius = 8
         view.clipsToBounds = true
         return view
@@ -95,6 +102,7 @@ class SettingComponents: UIView {
     let pacPercentageLabel: UILabel = {
         let label = UILabel()
         label.text = "PAC percentage"
+        label.textColor = CustomColor.labelColor
         return label
     }()
     
@@ -102,12 +110,13 @@ class SettingComponents: UIView {
         let text = UITextField()
         text.placeholder = "Put de PAC percentage value"
         text.keyboardType = .decimalPad
+        text.textColor = CustomColor.textColor
         return text
     }()
     
     var viewIodinePercentage: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 233/255, green: 140/255, blue: 1/255, alpha: 1.0)
+        view.backgroundColor = CustomColor.viewColor
         view.layer.cornerRadius = 8
         view.clipsToBounds = true
         return view
@@ -116,6 +125,7 @@ class SettingComponents: UIView {
     let iodinePercentageLabel: UILabel = {
         let label = UILabel()
         label.text = "Iodine percentage"
+        label.textColor = CustomColor.labelColor
         return label
     }()
     
@@ -123,14 +133,20 @@ class SettingComponents: UIView {
         let text = UITextField()
         text.placeholder = "Put de Iodine percentage value"
         text.keyboardType = .decimalPad
+        text.textColor = CustomColor.textColor
         return text
     }()
     
     let saveButton: UIButton = {
         let button = UIButton()
         button.setTitle("Save", for: .normal)
-        button.backgroundColor = UIColor.white.withAlphaComponent(0.4)
+        button.backgroundColor = CustomColor.buttonBackgroundColor
         button.layer.cornerRadius = 6
+        button.setTitleColor(CustomColor.buttonTextColor, for: .normal)
+        button.layer.shadowRadius = 0.6
+        button.layer.shadowOpacity = 0.3
+        button.layer.shadowColor = UIColor.black.cgColor //CustomColor.barTextUnselectedColor.cgColor
+        button.layer.shadowOffset = CGSize(width: 3, height: 3)
         return button
     }()
 }

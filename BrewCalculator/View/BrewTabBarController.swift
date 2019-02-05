@@ -19,8 +19,8 @@ class BrewTabBarController: UITabBarController {
     private func createTabBar() {
         
         
-        let selectedColor   = UIColor(red: 188.0/255.0, green: 23.0/255.0, blue: 1.0/255.0, alpha: 1.0)
-        let unselectedColor = UIColor(red: 200.0/255.0, green: 95.0/255.0, blue: 2.0/255.0, alpha: 1.0)
+        let selectedColor   = CustomColor.barTextSelectedColor
+        let unselectedColor = CustomColor.barTextUnselectedColor
 
         
         let waterViewController = WaterRouter.createViewController()
@@ -38,7 +38,7 @@ class BrewTabBarController: UITabBarController {
         
         self.viewControllers = tabs
         
-        self.tabBar.barTintColor = UIColor(red: 242/255, green: 142/255, blue: 28/255, alpha: 1.0)
+        self.tabBar.barTintColor = CustomColor.barColor
         
         self.tabBar.tintColor = selectedColor
         self.tabBar.unselectedItemTintColor = unselectedColor

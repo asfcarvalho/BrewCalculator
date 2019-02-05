@@ -11,6 +11,8 @@
 		C4010C31220320EC000989BE /* Paramters+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4010C2F220320EC000989BE /* Paramters+CoreDataProperties.swift */; };
 		C4010C3422033651000989BE /* WaterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4010C3322033651000989BE /* WaterWorker.swift */; };
 		C40E4D9B2208B57500F109C7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E4D9A2208B57500F109C7 /* BaseViewController.swift */; };
+		C4302900220A1DA200A16BA9 /* UIColor+colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43028FF220A1DA200A16BA9 /* UIColor+colors.swift */; };
+		C4302902220A2CC800A16BA9 /* UIView+textField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4302901220A2CC800A16BA9 /* UIView+textField.swift */; };
 		C448FA842204792F00D4D35F /* PacCalculationComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448FA832204792F00D4D35F /* PacCalculationComponents.swift */; };
 		C448FA8622047BCE00D4D35F /* IodineCalculationComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448FA8522047BCE00D4D35F /* IodineCalculationComponents.swift */; };
 		C448FA882204D9CC00D4D35F /* SettingComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448FA872204D9CC00D4D35F /* SettingComponents.swift */; };
@@ -65,6 +67,8 @@
 		C4010C2F220320EC000989BE /* Paramters+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Paramters+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C4010C3322033651000989BE /* WaterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterWorker.swift; sourceTree = "<group>"; };
 		C40E4D9A2208B57500F109C7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C43028FF220A1DA200A16BA9 /* UIColor+colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+colors.swift"; sourceTree = "<group>"; };
+		C4302901220A2CC800A16BA9 /* UIView+textField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+textField.swift"; sourceTree = "<group>"; };
 		C448FA832204792F00D4D35F /* PacCalculationComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacCalculationComponents.swift; sourceTree = "<group>"; };
 		C448FA8522047BCE00D4D35F /* IodineCalculationComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IodineCalculationComponents.swift; sourceTree = "<group>"; };
 		C448FA872204D9CC00D4D35F /* SettingComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingComponents.swift; sourceTree = "<group>"; };
@@ -142,6 +146,16 @@
 				C40E4D9A2208B57500F109C7 /* BaseViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C43028FE220A1D7100A16BA9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C4B828432200C55300645513 /* UIView+anchors.swift */,
+				C43028FF220A1DA200A16BA9 /* UIColor+colors.swift */,
+				C4302901220A2CC800A16BA9 /* UIView+textField.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		C488EC802201E70700D35312 /* Water */ = {
@@ -286,13 +300,13 @@
 		C4B82803220079EA00645513 /* BrewCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				C43028FE220A1D7100A16BA9 /* UI */,
 				C40E4D992208B55800F109C7 /* ViewController */,
 				C488EC9C22024C2000D35312 /* Model */,
 				C488EC8A22022F4400D35312 /* Settings */,
 				C488EC812201E71E00D35312 /* View */,
 				C488EC802201E70700D35312 /* Water */,
 				C4B82804220079EA00645513 /* AppDelegate.swift */,
-				C4B828432200C55300645513 /* UIView+anchors.swift */,
 				C4B82806220079EA00645513 /* ViewController.swift */,
 				C4B82808220079EA00645513 /* Main.storyboard */,
 				C4B8280E220079EC00645513 /* Assets.xcassets */,
@@ -495,6 +509,7 @@
 				C4B82807220079EA00645513 /* ViewController.swift in Sources */,
 				C4B8280D220079EA00645513 /* BrewCalculator.xcdatamodeld in Sources */,
 				C488EC94220230D000D35312 /* SettingViewController.swift in Sources */,
+				C4302902220A2CC800A16BA9 /* UIView+textField.swift in Sources */,
 				C488EC8922021A6C00D35312 /* WaterPresenter.swift in Sources */,
 				C4B8283722007A6800645513 /* WaterViewController.swift in Sources */,
 				C488EC7F2201E64D00D35312 /* WaterToHightComponets.swift in Sources */,
@@ -502,6 +517,7 @@
 				C488EC922202308C00D35312 /* SettingRouter.swift in Sources */,
 				C4B82805220079EA00645513 /* AppDelegate.swift in Sources */,
 				C4010C31220320EC000989BE /* Paramters+CoreDataProperties.swift in Sources */,
+				C4302900220A1DA200A16BA9 /* UIColor+colors.swift in Sources */,
 				C488EC9E22024C3300D35312 /* Setting.swift in Sources */,
 				C488EC96220230E600D35312 /* SettingView.swift in Sources */,
 				C4B8283F22007F5F00645513 /* BrewTabBarController.swift in Sources */,

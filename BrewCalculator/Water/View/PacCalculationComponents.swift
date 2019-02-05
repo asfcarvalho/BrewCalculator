@@ -13,14 +13,14 @@ class PacCalculationComponents: SodaCalculationComponets {
         let label = UILabel()
         label.text = "PAC calculation"
         label.textAlignment = .center
-        label.textColor = UIColor(red: 246/255, green: 216/255, blue: 141/255, alpha: 1.0)
+        label.textColor = CustomColor.titleColor
         label.font = UIFont.boldSystemFont(ofSize: 22)
         return label
     }()
     
     var pacView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 233/255, green: 140/255, blue: 1/255, alpha: 1.0)
+        view.backgroundColor = CustomColor.viewColor
         view.layer.cornerRadius = 8
         view.clipsToBounds = true
         return view
@@ -35,7 +35,7 @@ class PacCalculationComponents: SodaCalculationComponets {
     
     var viewWaterPac: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.white.withAlphaComponent(0.4)
+        view.backgroundColor = CustomColor.editableViewColor
         return view
     }()
     
@@ -47,6 +47,7 @@ class PacCalculationComponents: SodaCalculationComponets {
     let waterVolumePacLabel: UILabel = {
         let label = UILabel()
         label.text = "Water/ML"
+        label.textColor = CustomColor.labelColor
         label.textAlignment = .center
         return label
     }()
@@ -60,12 +61,14 @@ class PacCalculationComponents: SodaCalculationComponets {
         textView.minimumFontSize = 10
         textView.keyboardType = .decimalPad
         textView.textAlignment = .center
+        textView.textColor = CustomColor.textColor
         return textView
     }()
     
     let pacVolumeLabel: UILabel = {
         let label = UILabel()
         label.text = "PAC/G"
+        label.textColor = CustomColor.labelColor
         label.textAlignment = .center
         return label
     }()
@@ -78,6 +81,7 @@ class PacCalculationComponents: SodaCalculationComponets {
         textView.adjustsFontSizeToFitWidth = true
         textView.minimumFontSize = 10
         textView.textAlignment = .center
+        textView.textColor = CustomColor.textColor
         return textView
     }()
 }
