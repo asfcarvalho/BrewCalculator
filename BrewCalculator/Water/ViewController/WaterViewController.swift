@@ -13,7 +13,6 @@ class WaterViewController: BaseViewController {
     var waterView: WaterView?
     var interactor: WaterInteractorInputProtocol?
     private var stringArray: String = ""
-    private var textFiledPosition = CGRect(x: 0, y: 0, width: 0, height: 0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +40,7 @@ class WaterViewController: BaseViewController {
         waterView?.waterVolumeIodineText.addTarget(self, action: #selector(waterIodineVolumeTextChange(_:)), for: .editingChanged)
         waterView?.waterVolumeIodineText.addTarget(self, action: #selector(textBeginChange(_:)), for: .editingDidBegin)
         
-        setupViewController(viewMain: waterView?.viewMain ?? UIView(), scrollMain: waterView?.scrollMain ?? UIScrollView(), textFiledPosition: textFiledPosition)
+        setupViewController(viewMain: waterView?.viewMain ?? UIView(), scrollMain: waterView?.scrollMain ?? UIScrollView())
     }
     
     override func viewDidAppear(_ animated: Bool) {

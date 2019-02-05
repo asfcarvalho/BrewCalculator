@@ -12,7 +12,6 @@ class SettingViewController: BaseViewController {
     
     var interactor: SettingInteractorInputProtocol?
     var router: SettingRouterProtocol?
-    private var textFiledPosition = CGRect(x: 0, y: 0, width: 0, height: 0)
     
     
     private var settingView: SettingView?
@@ -43,7 +42,7 @@ class SettingViewController: BaseViewController {
         //get settings
         interactor?.getSetting()
         
-        setupViewController(viewMain: settingView?.viewMain ?? UIView(), scrollMain: settingView?.scrollMain ?? UIScrollView(), textFiledPosition: textFiledPosition)
+        setupViewController(viewMain: settingView?.viewMain ?? UIView(), scrollMain: settingView?.scrollMain ?? UIScrollView())
     }
     
     @objc private func touchViewAction() {

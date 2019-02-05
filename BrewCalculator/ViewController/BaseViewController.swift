@@ -12,14 +12,13 @@ class BaseViewController: UIViewController {
 
     private var viewMain: UIView!
     private var scrollMain: UIScrollView!
-    private var textFiledPosition: CGRect!
+    private var textFiledPosition = CGRect(x: 0, y: 0, width: 0, height: 0)
     
     fileprivate var lastPosition = CGPoint(x: 0, y: 0)
     
-    func setupViewController(viewMain: UIView, scrollMain: UIScrollView, textFiledPosition: CGRect) {
+    func setupViewController(viewMain: UIView, scrollMain: UIScrollView) {
         self.viewMain = viewMain
         self.scrollMain = scrollMain
-        self.textFiledPosition = textFiledPosition
     }
     
     override func viewDidLoad() {
@@ -53,7 +52,7 @@ class BaseViewController: UIViewController {
                 self.scrollMain.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardRect.height, right: 0)
                 
                 self.lastPosition = self.scrollMain.contentOffset
-                let contentOfSet = CGPoint(x: 0, y: collapseSpace + 10)
+                let contentOfSet = CGPoint(x: 0, y: collapseSpace)
                 self.scrollMain.setContentOffset(contentOfSet, animated: true)
             }else {
                 self.scrollMain.contentInset = UIEdgeInsets.zero
