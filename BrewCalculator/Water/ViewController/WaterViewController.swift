@@ -12,7 +12,7 @@ class WaterViewController: BaseViewController {
 
     var waterView: WaterView?
     var interactor: WaterInteractorInputProtocol?
-    private var stringArray: String = ""
+    private var stringArradius: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()

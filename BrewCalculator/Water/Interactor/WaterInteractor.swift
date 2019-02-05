@@ -18,7 +18,7 @@ class WaterInteractor: WaterInteractorInputProtocol {
     func calcWaterToHeight(value: Double) {
         
         let v = value * 1000
-        r = setting?.ray ?? r
+        r = setting?.radius ?? r
         
         let h = Double(String(format: "%.2f", v / (pi * (r * r)))) ?? 0.0
         
@@ -28,7 +28,7 @@ class WaterInteractor: WaterInteractorInputProtocol {
     func calcHeightToWater(value: Double) {
         
         
-        r = setting?.ray ?? r
+        r = setting?.radius ?? r
         
         let l = Double(String(format: "%.2f", ((value * pi * (r * r)) / 1000))) ?? 0.0
         

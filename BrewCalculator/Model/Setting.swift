@@ -9,7 +9,7 @@
 import Foundation
 
 struct Setting {
-    let ray: Double?
+    let radius: Double?
     let sodaPercentage: Double?
     let sodaProportion: Double?
     let pacPercentage: Double?

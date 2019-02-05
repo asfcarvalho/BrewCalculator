@@ -17,7 +17,7 @@ extension Paramters {
         return NSFetchRequest<Paramters>(entityName: "Paramters")
     }
 
-    @NSManaged public var ray: Double
+    @NSManaged public var radius: Double
     @NSManaged public var sodaPercentage: Double
     @NSManaged public var sodaProportion: Double
     @NSManaged public var pacPercentage: Double

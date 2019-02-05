@@ -21,7 +21,7 @@ class SettingComponents: UIView {
         return scroll
     }()
     
-    var viewRay: UIView = {
+    var viewRadius: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(red: 233/255, green: 140/255, blue: 1/255, alpha: 1.0)
         view.layer.cornerRadius = 8
@@ -29,15 +29,15 @@ class SettingComponents: UIView {
         return view
     }()
     
-    let rayLabel: UILabel = {
+    let radiusLabel: UILabel = {
         let label = UILabel()
-        label.text = "Ray"
+        label.text = "Radius"
         return label
     }()
     
-    let rayText: UITextField = {
+    let radiusText: UITextField = {
         let text = UITextField()
-        text.placeholder = "Put de ray value"
+        text.placeholder = "Put de radius value"
         text.keyboardType = .decimalPad
         return text
     }()

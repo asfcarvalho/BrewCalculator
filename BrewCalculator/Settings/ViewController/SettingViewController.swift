@@ -29,7 +29,7 @@ class SettingViewController: BaseViewController {
         
         settingView?.saveButton.addTarget(self, action: #selector(saveAction), for: .touchUpInside)
         
-        settingView?.rayText.addTarget(self, action: #selector(textBeginChange(_:)), for: .editingDidBegin)
+        settingView?.radiusText.addTarget(self, action: #selector(textBeginChange(_:)), for: .editingDidBegin)
         
         settingView?.sodaPercentageText.addTarget(self, action: #selector(textBeginChange(_:)), for: .editingDidBegin)
         
@@ -46,7 +46,7 @@ class SettingViewController: BaseViewController {
     }
     
     @objc private func touchViewAction() {
-        settingView?.rayText.endEditing(true)
+        settingView?.radiusText.endEditing(true)
         settingView?.sodaProportionText.endEditing(true)
         settingView?.sodaPercentageText.endEditing(true)
         settingView?.iodinePercentageText.endEditing(true)
@@ -54,8 +54,8 @@ class SettingViewController: BaseViewController {
     }
     
     @objc private func saveAction() {
-        settingView?.rayText.endEditing(true)
-        interactor?.setSetting(setting: Setting(ray: Double(settingView?.rayText.text?.replacingOccurrences(of: ",", with: ".") ?? "0.0"),
+        settingView?.radiusText.endEditing(true)
+        interactor?.setSetting(setting: Setting(radius: Double(settingView?.radiusText.text?.replacingOccurrences(of: ",", with: ".") ?? "0.0"),
                                                 sodaPercentage: Double(settingView?.sodaPercentageText.text?.replacingOccurrences(of: ",", with: ".") ?? "0.0"),
                                                 sodaProportion: Double(settingView?.sodaProportionText.text?.replacingOccurrences(of: ",", with: ".") ?? "0.0"),
                                                 pacPercentage: Double(settingView?.pacPercentageText.text?.replacingOccurrences(of: ",", with: ".") ?? "0.0"),
@@ -73,7 +73,7 @@ extension SettingViewController: SettingViewControllerProtocol {
     }
     
     func getSetting(setting: Setting) {
-        settingView?.rayText.text = setting.ray?.description
+        settingView?.radiusText.text = setting.radius?.description
         settingView?.sodaPercentageText.text = setting.sodaPercentage?.description
         settingView?.sodaProportionText.text = setting.sodaProportion?.description
         settingView?.iodinePercentageText.text = setting.iodinePercentage?.description

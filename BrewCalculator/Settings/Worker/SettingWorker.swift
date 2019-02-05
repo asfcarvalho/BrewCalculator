@@ -20,8 +20,8 @@ class SettingWorker: SettingWorkerInputProtocol {
             
             do{
                 let result = try context.viewContext.fetch(request)
-                print(result.first?.ray)
-                interactor?.getSetting(setting: Setting(ray: result.first?.ray,
+                print(result.first?.radius)
+                interactor?.getSetting(setting: Setting(radius: result.first?.radius,
                                                         sodaPercentage: result.first?.sodaPercentage,
                                                         sodaProportion: result.first?.sodaProportion,
                                                         pacPercentage:  result.first?.pacPercentage,
@@ -40,7 +40,7 @@ class SettingWorker: SettingWorkerInputProtocol {
         
         if let context = delegate?.persistentContainer {
             let request = NSFetchRequest<Paramters>(entityName: String(describing: Paramters.self))
-//            paramters.ray = setting.ray ?? 0.0
+//            paramters.radius = setting.radius ?? 0.0
             
             do{
                 let result = try context.viewContext.fetch(request)
@@ -48,14 +48,14 @@ class SettingWorker: SettingWorkerInputProtocol {
                     if let newParamters = NSEntityDescription.entity(forEntityName: String(describing: Paramters.self),
                                                                      in: context.viewContext) {
                         let value = Paramters(entity: newParamters, insertInto: context.viewContext)
-                        value.ray = setting.ray ?? 0.0
+                        value.radius = setting.radius ?? 0.0
                         value.sodaPercentage = setting.sodaPercentage ?? 0.0
                         value.sodaProportion = setting.sodaProportion ?? 0.0
                         value.pacPercentage = setting.pacPercentage ?? 0.0
                         value.iodinePercentage = setting.iodinePercentage ?? 0.0
                     }
                 }else {
-                    result.first?.ray = setting.ray ?? 0.0
+                    result.first?.radius = setting.radius ?? 0.0
                     result.first?.sodaPercentage = setting.sodaPercentage ?? 0.0
                     result.first?.sodaProportion = setting.sodaProportion ?? 0.0
                     result.first?.pacPercentage = setting.pacPercentage ?? 0.0

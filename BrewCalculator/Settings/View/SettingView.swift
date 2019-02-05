@@ -19,7 +19,7 @@ class SettingView: SettingComponents {
                 
         createViews()
         
-        setupRayAnchor()
+        setupRadiusAnchor()
         setupSodaAnchor()
         setupPACAnchor()
         setupIodineAnchor()
@@ -28,8 +28,8 @@ class SettingView: SettingComponents {
     
     
     private func createViews() {
-        viewRay.addSubview(rayLabel)
-        viewRay.addSubview(rayText)
+        viewRadius.addSubview(radiusLabel)
+        viewRadius.addSubview(radiusText)
         
         viewSodaPercentage.addSubview(sodaPercentageLabel)
         viewSodaPercentage.addSubview(sodaPercentageText)
@@ -43,7 +43,7 @@ class SettingView: SettingComponents {
         viewIodinePercentage.addSubview(iodinePercentageLabel)
         viewIodinePercentage.addSubview(iodinePercentageText)
         
-        viewMain.addSubview(viewRay)
+        viewMain.addSubview(viewRadius)
         viewMain.addSubview(viewSodaPercentage)
         viewMain.addSubview(viewSodaProportion)
         viewMain.addSubview(viewPACPercentage)
@@ -53,23 +53,23 @@ class SettingView: SettingComponents {
         self.addSubview(scrollMain)
     }
     
-    //This function make the ray view anchor configuration
-    fileprivate func setupRayAnchor() {
+    //This function make the radius view anchor configuration
+    fileprivate func setupRadiusAnchor() {
         
         scrollMain.anchor(top: self.safeAreaLayoutGuide.topAnchor, leading: self.leadingAnchor, bottom: self.safeAreaLayoutGuide.bottomAnchor, trailing: self.trailingAnchor)
         
         viewMain.anchor(top: scrollMain.topAnchor, leading: self.leadingAnchor, bottom: scrollMain.bottomAnchor, trailing: self.trailingAnchor)
         
-        viewRay.anchor(top: viewMain.safeAreaLayoutGuide.topAnchor, leading: viewMain.leadingAnchor, bottom: nil, trailing: viewMain.trailingAnchor, padding: UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16), size: CGSize(width: viewMain.frame.width, height: 60))
+        viewRadius.anchor(top: viewMain.safeAreaLayoutGuide.topAnchor, leading: viewMain.leadingAnchor, bottom: nil, trailing: viewMain.trailingAnchor, padding: UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16), size: CGSize(width: viewMain.frame.width, height: 60))
         
-        rayLabel.anchor(top: viewRay.topAnchor, leading: viewRay.leadingAnchor, bottom: nil, trailing: viewRay.trailingAnchor, padding: UIEdgeInsets(top: 4, left: 8, bottom: 0, right: 8), size: CGSize(width: viewRay.frame.width, height: 20))
+        radiusLabel.anchor(top: viewRadius.topAnchor, leading: viewRadius.leadingAnchor, bottom: nil, trailing: viewRadius.trailingAnchor, padding: UIEdgeInsets(top: 4, left: 8, bottom: 0, right: 8), size: CGSize(width: viewRadius.frame.width, height: 20))
         
-        rayText.anchor(top: rayLabel.bottomAnchor, leading: viewRay.leadingAnchor, bottom: viewRay.bottomAnchor, trailing: viewRay.trailingAnchor, padding: UIEdgeInsets(top: 4, left: 8, bottom: 0, right: 8), size: CGSize(width: viewRay.frame.width, height: 40))
+        radiusText.anchor(top: radiusLabel.bottomAnchor, leading: viewRadius.leadingAnchor, bottom: viewRadius.bottomAnchor, trailing: viewRadius.trailingAnchor, padding: UIEdgeInsets(top: 4, left: 8, bottom: 0, right: 8), size: CGSize(width: viewRadius.frame.width, height: 40))
     }
     
     //This function make the soda view anchor configuration
     fileprivate func setupSodaAnchor() {
-        viewSodaPercentage.anchor(top: viewRay.bottomAnchor, leading: viewMain.leadingAnchor, bottom: nil, trailing: viewMain.trailingAnchor, padding: UIEdgeInsets(top: 32, left: 16, bottom: 0, right: 16), size: CGSize(width: viewMain.frame.width, height: 60))
+        viewSodaPercentage.anchor(top: viewRadius.bottomAnchor, leading: viewMain.leadingAnchor, bottom: nil, trailing: viewMain.trailingAnchor, padding: UIEdgeInsets(top: 32, left: 16, bottom: 0, right: 16), size: CGSize(width: viewMain.frame.width, height: 60))
         
         sodaPercentageLabel.anchor(top: viewSodaPercentage.topAnchor, leading: viewSodaPercentage.leadingAnchor, bottom: nil, trailing: viewSodaPercentage.trailingAnchor, padding: UIEdgeInsets(top: 4, left: 8, bottom: 0, right: 8), size: CGSize(width: viewSodaPercentage.frame.width, height: 20))
         
