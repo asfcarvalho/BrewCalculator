@@ -25,7 +25,7 @@ class SettingComponents: UIView {
         let view = UIView()
         view.backgroundColor = CustomColor.viewColor        
         view.clipsToBounds = true
-        view.configDefault()
+        view.configShadowDefault()
         return view
     }()
     
@@ -47,9 +47,8 @@ class SettingComponents: UIView {
     var viewSodaPercentage: UIView = {
         let view = UIView()
         view.backgroundColor = CustomColor.viewColor
-        view.layer.cornerRadius = 8
         view.clipsToBounds = true
-        view.configDefault()
+        view.configShadowDefault()
         return view
     }()
     
@@ -71,8 +70,8 @@ class SettingComponents: UIView {
     var viewSodaProportion: UIView = {
         let view = UIView()
         view.backgroundColor = CustomColor.viewColor
-        view.layer.cornerRadius = 8
         view.clipsToBounds = true
+        view.configShadowDefault()
         return view
     }()
     
@@ -94,8 +93,8 @@ class SettingComponents: UIView {
     var viewPACPercentage: UIView = {
         let view = UIView()
         view.backgroundColor = CustomColor.viewColor
-        view.layer.cornerRadius = 8
         view.clipsToBounds = true
+        view.configShadowDefault()
         return view
     }()
     
@@ -117,8 +116,8 @@ class SettingComponents: UIView {
     var viewIodinePercentage: UIView = {
         let view = UIView()
         view.backgroundColor = CustomColor.viewColor
-        view.layer.cornerRadius = 8
         view.clipsToBounds = true
+        view.configShadowDefault()
         return view
     }()
     
@@ -140,13 +139,9 @@ class SettingComponents: UIView {
     let saveButton: UIButton = {
         let button = UIButton()
         button.setTitle("Save", for: .normal)
-        button.backgroundColor = CustomColor.buttonBackgroundColor
-        button.layer.cornerRadius = 6
+        button.backgroundColor = CustomColor.buttonBackgroundColor        
         button.setTitleColor(CustomColor.buttonTextColor, for: .normal)
-        button.layer.shadowRadius = 0.6
-        button.layer.shadowOpacity = 0.3
-        button.layer.shadowColor = UIColor.black.cgColor //CustomColor.barTextUnselectedColor.cgColor
-        button.layer.shadowOffset = CGSize(width: 3, height: 3)
+        button.configShadowDefault()
         return button
     }()
 }

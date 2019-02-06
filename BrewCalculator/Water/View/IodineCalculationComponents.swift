@@ -21,8 +21,8 @@ class IodineCalculationComponents: PacCalculationComponents {
     var iodineView: UIView = {
         let view = UIView()
         view.backgroundColor = CustomColor.viewColor
-        view.layer.cornerRadius = 8
         view.clipsToBounds = true
+        view.configShadowDefault()
         return view
     }()
     
@@ -36,6 +36,7 @@ class IodineCalculationComponents: PacCalculationComponents {
     var viewWaterIodine: UIView = {
         let view = UIView()
         view.backgroundColor = CustomColor.editableViewColor
+        view.configCornerRadius([CornerRadiusEnum.left])
         return view
     }()
     

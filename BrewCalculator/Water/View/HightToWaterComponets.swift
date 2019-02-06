@@ -21,19 +21,20 @@ class HeightToWaterComponents: WaterToHeightComponets {
     var viewHeightToWater: UIView = {
         let view = UIView()
         view.backgroundColor = CustomColor.viewColor
-        view.layer.cornerRadius = 8
         view.clipsToBounds = true
+        view.configShadowDefault()
         return view
     }()
     
     var viewVolumeHeightToWater: UIView = {
-        let view = UIView()        
+        let view = UIView()
         return view
     }()
     
     var viewHeightHeightToWater: UIView = {
         let view = UIView()
         view.backgroundColor = CustomColor.editableViewColor
+        view.configCornerRadius([CornerRadiusEnum.right])
         return view
     }()
     
