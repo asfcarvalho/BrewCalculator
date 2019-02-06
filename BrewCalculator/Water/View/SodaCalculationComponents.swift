@@ -11,7 +11,7 @@ import UIKit
 class SodaCalculationComponets: HeightToWaterComponents {
     let sodaLabel: UILabel = {
         let label = UILabel()
-        label.text = "Soda calculation"
+        label.text = NSLocalizedString("sodaTitle", comment: "")
         label.textAlignment = .center
         label.textColor = CustomColor.titleColor
         label.font = UIFont.boldSystemFont(ofSize: 22)
@@ -47,7 +47,7 @@ class SodaCalculationComponets: HeightToWaterComponents {
     
     let waterVolumeSodaLabel: UILabel = {
         let label = UILabel()
-        label.text = "Water/ML"
+        label.text = NSLocalizedString("waterLabel", comment: "")
         label.textColor = CustomColor.labelColor
         label.textAlignment = .center
         return label
@@ -55,7 +55,7 @@ class SodaCalculationComponets: HeightToWaterComponents {
     
     var waterVolumeSodaText: UITextField = {
         let textView = UITextField()
-        textView.placeholder = "Put the water volume"
+        textView.placeholder = NSLocalizedString("waterPlaceholder", comment: "")
         textView.isUserInteractionEnabled = true
         textView.font = UIFont.boldSystemFont(ofSize: 14)
         textView.adjustsFontSizeToFitWidth = true
@@ -68,7 +68,7 @@ class SodaCalculationComponets: HeightToWaterComponents {
     
     let sodaVolumeLabel: UILabel = {
         let label = UILabel()
-        label.text = "Soda/ML"
+        label.text = NSLocalizedString("sodaLabel", comment: "") 
         label.textColor = CustomColor.labelColor
         label.textAlignment = .center
         return label

@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  BrewCalculator
+
+  Created by Anderson Carvalho on 06/02/19.
+  Copyright © 2019 asfcarvalho. All rights reserved.
+*/
+
+"radiusLabel" = "Raio";
+"radiusPlaceholder" = "Informe o raio";
+"sodaPercentageLabel" = "Soda porcentagem";
+"sodaPercentagePlaceholder" = "Informe a porcentagem da soda";
+"sodaProportionLabel" = "Soda proporção";
+"sodaProportionPlaceholder" = "Informe a proporção da soda";
+"pacPercentageLabel" = "PAC porcentagem";
+"pacPercentagePlaceholder" = "Informe a porcentagem do PAC";
+
+"iodinePercentageLabel" = "Iodo porcentagem";
+"iodinePlaceholder" = "Informe a porcentagem de iodo";
+"save" = "salvar";
+"volumeTitle" = "Litros para Altura";
+"volumeLabel" = "Volume/L";
+"volumePlaceholder" = "Informe quantos litros";
+"heightLabel" = "Altura/CM";
+"heightTitle" = "Altura para litros";
+"heightPlaceholder" = "Informe a altura";
+"sodaTitle" = "Calculo da Soda";
+"waterLabel" = "Agua/ML";
+"waterPlaceholder" = "Informe quantos MLs";
+"sodaLabel" = "Soda/ML";
+"pacTitle" = "Calculo do PAC";
+"pacLabel" = "PAC/G";
+"iodineTitle" = "Calculo do iodo";
+"iodineLabel" = "Iodo/ML";

@@ -11,7 +11,7 @@ import UIKit
 class PacCalculationComponents: SodaCalculationComponets {
     let pacLabel: UILabel = {
         let label = UILabel()
-        label.text = "PAC calculation"
+        label.text = NSLocalizedString("pacTitle", comment: "")
         label.textAlignment = .center
         label.textColor = CustomColor.titleColor
         label.font = UIFont.boldSystemFont(ofSize: 22)
@@ -47,7 +47,7 @@ class PacCalculationComponents: SodaCalculationComponets {
     
     let waterVolumePacLabel: UILabel = {
         let label = UILabel()
-        label.text = "Water/ML"
+        label.text = NSLocalizedString("waterLabel", comment: "")
         label.textColor = CustomColor.labelColor
         label.textAlignment = .center
         return label
@@ -55,7 +55,7 @@ class PacCalculationComponents: SodaCalculationComponets {
     
     var waterVolumePacText: UITextField = {
         let textView = UITextField()
-        textView.placeholder = "Put the water volume"
+        textView.placeholder = NSLocalizedString("waterPlaceholder", comment: "")
         textView.isUserInteractionEnabled = true
         textView.font = UIFont.boldSystemFont(ofSize: 14)
         textView.adjustsFontSizeToFitWidth = true
@@ -68,7 +68,7 @@ class PacCalculationComponents: SodaCalculationComponets {
     
     let pacVolumeLabel: UILabel = {
         let label = UILabel()
-        label.text = "PAC/G"
+        label.text = NSLocalizedString("pacLabel", comment: "")
         label.textColor = CustomColor.labelColor
         label.textAlignment = .center
         return label

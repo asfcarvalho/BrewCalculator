@@ -11,7 +11,7 @@ import UIKit
 class HeightToWaterComponents: WaterToHeightComponets {
     let heightLabel: UILabel = {
         let label = UILabel()
-        label.text = "Height to Volume"
+        label.text = NSLocalizedString("heightTitle", comment: "")
         label.textAlignment = .center
         label.textColor = CustomColor.titleColor
         label.font = UIFont.boldSystemFont(ofSize: 22)
@@ -47,7 +47,7 @@ class HeightToWaterComponents: WaterToHeightComponets {
     
     let waterVolumeLabelHeightHeightToWater: UILabel = {
         let label = UILabel()
-        label.text = "Volume/L"
+        label.text = NSLocalizedString("volumeLabel", comment: "")
         label.textColor = CustomColor.labelColor
         label.textAlignment = .center
         return label
@@ -68,7 +68,7 @@ class HeightToWaterComponents: WaterToHeightComponets {
     
     let waterHeightLabelHeightHeightToWater: UILabel = {
         let label = UILabel()
-        label.text = "Height/CM"
+        label.text = NSLocalizedString("heightLabel", comment: "")
         label.textColor = CustomColor.labelColor
         label.textAlignment = .center
         return label
@@ -77,7 +77,7 @@ class HeightToWaterComponents: WaterToHeightComponets {
     var waterHeightTextHeightHeightToWater: UITextField = {
         let textView = UITextField()
         textView.isUserInteractionEnabled = true
-        textView.placeholder = "Put the height value"
+        textView.placeholder = NSLocalizedString("heightPlaceholder", comment: "")
         textView.font = UIFont.boldSystemFont(ofSize: 14)
         textView.keyboardType = .decimalPad
         textView.adjustsFontSizeToFitWidth = true

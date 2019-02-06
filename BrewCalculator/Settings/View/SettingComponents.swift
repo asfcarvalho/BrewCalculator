@@ -31,14 +31,14 @@ class SettingComponents: UIView {
     
     let radiusLabel: UILabel = {
         let label = UILabel()
-        label.text = "Radius"
+        label.text = NSLocalizedString("radiusLabel", comment: "")
         label.textColor = CustomColor.labelColor
         return label
     }()
     
     let radiusText: UITextField = {
         let text = UITextField()
-        text.placeholder = "Put de radius value"
+        text.placeholder = NSLocalizedString("radiusPlaceholder", comment: "")
         text.keyboardType = .decimalPad
         text.textColor = CustomColor.textColor
         return text
@@ -54,14 +54,14 @@ class SettingComponents: UIView {
     
     let sodaPercentageLabel: UILabel = {
         let label = UILabel()
-        label.text = "Soda percentage"
+        label.text = NSLocalizedString("sodaPercentageLabel", comment: "")
         label.textColor = CustomColor.labelColor
         return label
     }()
     
     let sodaPercentageText: UITextField = {
         let text = UITextField()
-        text.placeholder = "Put de soda percentage value"
+        text.placeholder = NSLocalizedString("sodaPercentagePlaceholder", comment: "")
         text.keyboardType = .decimalPad
         text.textColor = CustomColor.textColor
         return text
@@ -77,14 +77,14 @@ class SettingComponents: UIView {
     
     let sodaProportionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Soda proportion"
+        label.text = NSLocalizedString("sodaProportionLabel", comment: "")
         label.textColor = CustomColor.labelColor
         return label
     }()
     
     let sodaProportionText: UITextField = {
         let text = UITextField()
-        text.placeholder = "Put de soda proportion value"
+        text.placeholder = NSLocalizedString("sodaProportionPlaceholder", comment: "")
         text.keyboardType = .decimalPad
         text.textColor = CustomColor.textColor
         return text
@@ -100,14 +100,14 @@ class SettingComponents: UIView {
     
     let pacPercentageLabel: UILabel = {
         let label = UILabel()
-        label.text = "PAC percentage"
+        label.text = NSLocalizedString("pacPercentageLabel", comment: "")
         label.textColor = CustomColor.labelColor
         return label
     }()
     
     let pacPercentageText: UITextField = {
         let text = UITextField()
-        text.placeholder = "Put de PAC percentage value"
+        text.placeholder = NSLocalizedString("pacPercentagePlaceholder", comment: "")
         text.keyboardType = .decimalPad
         text.textColor = CustomColor.textColor
         return text
@@ -123,14 +123,14 @@ class SettingComponents: UIView {
     
     let iodinePercentageLabel: UILabel = {
         let label = UILabel()
-        label.text = "Iodine percentage"
+        label.text = NSLocalizedString("iodinePercentageLabel", comment: "")
         label.textColor = CustomColor.labelColor
         return label
     }()
     
     let iodinePercentageText: UITextField = {
         let text = UITextField()
-        text.placeholder = "Put de Iodine percentage value"
+        text.placeholder = NSLocalizedString("iodinePercentagePlaceholder", comment: "")
         text.keyboardType = .decimalPad
         text.textColor = CustomColor.textColor
         return text
@@ -138,7 +138,7 @@ class SettingComponents: UIView {
     
     let saveButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Save", for: .normal)
+        button.setTitle(NSLocalizedString("save", comment: ""), for: .normal)
         button.backgroundColor = CustomColor.buttonBackgroundColor        
         button.setTitleColor(CustomColor.buttonTextColor, for: .normal)
         button.configShadowDefault()

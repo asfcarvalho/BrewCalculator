@@ -11,7 +11,7 @@ import UIKit
 class IodineCalculationComponents: PacCalculationComponents {
     let iodineLabel: UILabel = {
         let label = UILabel()
-        label.text = "Iodine calculation"
+        label.text = NSLocalizedString("iodineTitle", comment: "")
         label.textAlignment = .center
         label.textColor = CustomColor.titleColor
         label.font = UIFont.boldSystemFont(ofSize: 22)
@@ -47,14 +47,14 @@ class IodineCalculationComponents: PacCalculationComponents {
     
     let waterVolumeIodineLabel: UILabel = {
         let label = UILabel()
-        label.text = "Water/ML"
+        label.text = NSLocalizedString("waterLabel", comment: "")
         label.textAlignment = .center
         return label
     }()
     
     var waterVolumeIodineText: UITextField = {
         let textView = UITextField()
-        textView.placeholder = "Put the water volume"
+        textView.placeholder = NSLocalizedString("waterPlaceholder", comment: "")
         textView.isUserInteractionEnabled = true
         textView.font = UIFont.boldSystemFont(ofSize: 14)
         textView.adjustsFontSizeToFitWidth = true
@@ -67,7 +67,7 @@ class IodineCalculationComponents: PacCalculationComponents {
     
     let iodineVolumeLabel: UILabel = {
         let label = UILabel()
-        label.text = "Iodine/ML"
+        label.text = NSLocalizedString("iodineLabel", comment: "")
         label.textColor = CustomColor.labelColor
         label.textAlignment = .center
         return label
