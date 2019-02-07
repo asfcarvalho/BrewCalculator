@@ -45,7 +45,7 @@ class BaseViewController: UIViewController {
                 let distanceToBottom = self.scrollMain.frame.size.height - (self.textFiledPosition.origin.y) - (self.textFiledPosition.size.height)
                 let collapseSpace = keyboardRect.height - distanceToBottom
                 
-                if collapseSpace < 0 || collapseSpace < 0 {
+                if collapseSpace < 0 {
                     return
                 }
                 

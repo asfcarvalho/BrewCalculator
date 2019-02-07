@@ -31,15 +31,15 @@ struct CustomColor {
     }()
     
     static var barColor: UIColor = {
-        return UIColor(red: 242/255, green: 142/255, blue: 28/255, alpha: 1.0)
+        return UIColor(red: 254/255, green: 247/255, blue: 233/255, alpha: 1.0)
     }()
     
     static var barTextSelectedColor: UIColor = {
-        return UIColor(red: 188.0/255.0, green: 23.0/255.0, blue: 1.0/255.0, alpha: 1.0)
+        return UIColor(red: 54/255, green: 8/255, blue: 11/255, alpha: 1.0)
     }()
     
     static var barTextUnselectedColor: UIColor = {
-       return UIColor(red: 200.0/255.0, green: 95.0/255.0, blue: 2.0/255.0, alpha: 1.0)
+       return UIColor(red: 54/255, green: 8/255, blue: 11/255, alpha: 0.5)
     }()
     
     static var buttonBackgroundColor: UIColor = {
